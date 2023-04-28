@@ -2,16 +2,33 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const StyledNav = styled.nav`
+
   display: flex;
   justify-content: space-between;
+  align-items: center
   position: sticky;
-  margin: auto;
+ 
+  padding: 30px 20px;
+  backdrop-filter: blur(10px);
+background-color: rgba(0, 0, 0, 0.7);
+
+flex: 0 0 auto;
+flex-flow: row nowrap;
+
+left: 0px;
+
+
+
+top: 0px;
+width: 100%;
+
+z-index: 1;
 `;
 
 const StyledList = styled.ul`
   display: flex;
-  alignt-items: center;
-  gap: 2rem;
+
+  gap: 4rem;
   list-style: none;
 `;
 
