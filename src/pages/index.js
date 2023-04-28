@@ -1,8 +1,10 @@
-import { Inter } from "next/font/google";
+import Hero from "../../components/Hero";
 import Layout from "../../components/Layout";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
-  return <Layout />;
+  return (
+    <Layout>
+      <Hero />
+    </Layout>
+  );
 }
