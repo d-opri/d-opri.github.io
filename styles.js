@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyles = createGlobalStyle`
 @font-face {
   font-family: "Satoshi";
   src: url("../../asset/Satoshi/Satoshi-Variable.ttf");
@@ -8,7 +11,7 @@
 
 :root {
   font-family: Satoshi, sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 400;
 }
 
@@ -39,3 +42,5 @@ img {
   max-width: 100%;
   display: block;
 }
+
+`;
