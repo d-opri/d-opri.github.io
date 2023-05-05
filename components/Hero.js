@@ -14,7 +14,7 @@ const StyledCaption = styled.p`
 const Hero = () => {
   return (
     <StyledHeader>
-      <h1>WebDev Dani</h1>
+      <h1> bitches</h1>
       <StyledCaption>
         Here an introduction yadda yadda
         <br /> Then some more yadda yadda{" "}

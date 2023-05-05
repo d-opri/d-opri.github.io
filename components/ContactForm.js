@@ -42,7 +42,7 @@ export default function ContactForm() {
 }
 
 const StyledContactForm = styled.div`
-  width: 400px;
+  margin: 2rem;
   form {
     display: flex;
     align-items: flex-start;
@@ -80,7 +80,7 @@ const StyledContactForm = styled.div`
     input[type="submit"] {
       margin-top: 2rem;
       cursor: pointer;
-      background: rgb(249, 105, 14);
+      background: grey;
       color: white;
       border: none;
       &:hover {

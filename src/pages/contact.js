@@ -9,10 +9,10 @@ const StyledLink = styled(Link)`
 const Contact = () => {
   return (
     <>
-      <StyledLink href="/">dani.opri@protonmail.com </StyledLink>
+      {/* <StyledLink href="/">dani.opri@protonmail.com </StyledLink>
       <StyledLink href="/">Github</StyledLink>
       <StyledLink href="/">Behance</StyledLink>
-      <StyledLink href="/">Xing</StyledLink>
+      <StyledLink href="/">Xing</StyledLink> */}
       <ContactForm />
     </>
   );
