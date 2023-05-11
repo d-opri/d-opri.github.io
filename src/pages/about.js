@@ -1,50 +1,23 @@
 import styled from "styled-components";
+import { StyledBigTitle, StyledBodyText } from "../../components/Fonts";
 
-const Container = styled.main`
-  position: relative;
-  margin-left: 15%;
-`;
-
-const Title = styled.h1`
-  font-weight: 500;
-`;
-
-const Section = styled.section`
-  margin-right: 10%;
-  transform: translateY(30%);
-`;
-const Content = styled.article`
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
+const Container = styled.section`
+  position: absolute;
+  width: 860px;
+  height: 146px;
+  right: 147px;
+  top: 356px;
 `;
 
 export default function About() {
   return (
     <>
+      <StyledBigTitle>About</StyledBigTitle>
       <Container>
-        <Section>
-          <Title>Moin Moin</Title>
-          <Content>Here talking about self bla bla bla</Content>
-        </Section>
-        <Section>
-          <Title>Skills</Title>
-          <Content>
-            <br />
-            React
-            <br />
-            Node JS
-            <br />
-            Design system
-            <br />
-            Wireframing & Prototyping
-            <br />
-            Figma
-            <br />
-          </Content>
-        </Section>
+        <StyledBodyText>
+          Front-end developer who cares deeply about User Experience. Serious
+          passion for UI design and new technologies.
+        </StyledBodyText>
       </Container>
     </>
   );

@@ -1,25 +1,21 @@
 import styled from "styled-components";
+import { StyledHeading, StyledSubHeading } from "./Fonts";
 
-const StyledHeader = styled.header`
-  padding: 50px 100px;
-  font-size: 2rem;
-`;
-
-const StyledCaption = styled.p`
-  color: #000;
-  line-height: -1rem;
-  letter-spacing: 0.3px;
+const Container = styled.header`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 300px 284px;
+  gap: 19px;
+  position: relative;
 `;
 
 const Hero = () => {
   return (
-    <StyledHeader>
-      <h1> bitches</h1>
-      <StyledCaption>
-        Here an introduction yadda yadda
-        <br /> Then some more yadda yadda{" "}
-      </StyledCaption>
-    </StyledHeader>
+    <Container>
+      <StyledHeading> Dani Opri</StyledHeading>
+      <StyledSubHeading> Front-end Developer and UX Designer</StyledSubHeading>
+    </Container>
   );
 };
 
