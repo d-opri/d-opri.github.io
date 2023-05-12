@@ -37,19 +37,18 @@ const StyledBodyText = styled.p`
   letter-spacing: -0.005em;
 `;
 
-const StyledTitle = styled.h2`
+const StyledTitle = styled.h1`
+  font-size: 115px;
   font-style: normal;
-  font-weight: 600;
-  font-size: 75px;
-  line-height: 91px;
-
-  letter-spacing: 0.005em;
+  font-weight: 400;
+  letter-spacing: -4px;
+  line-height: 1.2em;
 `;
 const StyledSubtitle = styled.h3`
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
-  line-height: 36px;
+
   letter-spacing: 0.015em;
 `;
 

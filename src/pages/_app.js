@@ -13,35 +13,29 @@ export const GlobalStyles = createGlobalStyle`
 :root {
   font-family: Satoshi, sans-serif;
   font-size: 2rem;
-  font-weight: 400;
 }
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
+  background-color: rgb(0, 0, 0);
+  height: 100%;
+  color: #fff;
+  
 }
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 a {
   color: #fff;
-
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: line-through;
-}
-
-img {
-  max-width: 100%;
-  display: block;
 }
 
 `;

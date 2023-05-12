@@ -29,19 +29,6 @@ body {
 
 
 
-a {
-  color: #fff;
 
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: line-through;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
 
 `;
