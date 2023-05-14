@@ -4,22 +4,26 @@ import styled from "styled-components";
 
 export default function Navbar() {
   const [toggleMenue, setToggleMenue] = useState(false);
-  const [screenSize, setScreenSize] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const changeWidth = () => {
-      setScreenSize(window.innerWidth);
-    };
-
-    window.addEventListener("resize", changeWidth);
-    return () => {
-      window.removeEventListener("resize", changeWidth);
-    };
-  }, []);
+  const [width, setWidth] = useState(0);
 
   const toggleNav = () => {
     setToggleMenue(!toggleMenue);
   };
+
+  const handleWindowResize = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    handleWindowResize();
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
   return (
     <StyledNav>
       <StyledLink href="/">
@@ -28,7 +32,7 @@ export default function Navbar() {
       <button type="button" onClick={toggleNav}>
         X
       </button>
-      {(toggleMenue || screenSize > 500) && (
+      {(toggleMenue || width > 500) && (
         <ul>
           <li>
             <Link href="/">Work</Link>
@@ -44,28 +48,6 @@ export default function Navbar() {
     </StyledNav>
   );
 }
-
-// const StyledNav = styled.nav`
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   position: sticky;
-//   padding: 1rem 2rem;
-//   backdrop-filter: blur(10px);
-//   background-color: rgba(0, 0, 0, 0.7);
-//   flex: 0 0 auto;
-//   flex-flow: row nowrap;
-//   left: 0px;
-//   top: 0px;
-//   width: 100%;
-//   z-index: 1;
-// `;
-
-// const StyledList = styled.ul`
-//   display: flex;
-//   gap: 4rem;
-//   list-style: none;
-// `;
 
 const StyledNav = styled.nav`
     display: flex;
