@@ -38,7 +38,7 @@ const Container = styled.section`
   padding: 6rem 1.3rem;
   margin-inline: auto;
   width: 100%;
-  gap: 4rem;
+  gap: 2rem;
   outline: dashed white;
 `;
 
@@ -47,6 +47,7 @@ const TextContainer = styled.section`
   display: flex;
   flex-flow: column wrap;
   outline: dashed white;
+  width: min(100%, 570px);
 `;
 
 const StyledTitle = styled.h1`
@@ -59,7 +60,7 @@ const StyledBody = styled.div`
   display: flex;
   flex-flow: column nowrap;
   gap: 1.5rem;
-  width: min(100%, 770px);
+
   outline: dashed white;
 `;
 

@@ -6,7 +6,7 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.7);
   flex: 0 0 auto;

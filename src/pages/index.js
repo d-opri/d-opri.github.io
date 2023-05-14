@@ -55,5 +55,5 @@ const StyledList = styled.ul`
   display: flex;
   gap: 4rem;
   flex-flow: column nowrap;
-  outline: dashed white;
+  outline: dashed red;
 `;
