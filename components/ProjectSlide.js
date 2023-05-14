@@ -35,9 +35,10 @@ export default ProjectSlide;
 const Container = styled.section`
   display: flex;
   flex-flow: row wrap;
-  padding: 6rem 1.3rem;
+  justify-content: space-around;
+  padding: min(1.3rem, 5rem);
   margin-inline: auto;
-  width: 100%;
+  max-width: 100%;
   gap: 2rem;
   outline: dashed white;
 `;
@@ -47,7 +48,7 @@ const TextContainer = styled.section`
   display: flex;
   flex-flow: column wrap;
   outline: dashed white;
-  width: min(100%, 570px);
+  width: min(100%, 800px);
 `;
 
 const StyledTitle = styled.h1`
@@ -60,7 +61,6 @@ const StyledBody = styled.div`
   display: flex;
   flex-flow: column nowrap;
   gap: 1.5rem;
-
   outline: dashed white;
 `;
 
@@ -84,9 +84,9 @@ const Description = styled.p`
 const ImageContainer = styled.figure`
   display: flex;
   flex-flow: column nowrap;
-  gap: 1rem;
+  gap: 2rem;
   outline: dashed white;
-  width: 100%;
+  width: min(100%, 1000px);
 `;
 
 const StyledImage = styled(Image)`
