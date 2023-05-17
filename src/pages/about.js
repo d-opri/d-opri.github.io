@@ -1,50 +1,30 @@
 import styled from "styled-components";
+import { StyledBigTitle, StyledBodyText } from "../../components/Fonts";
+import Head from "next/head";
 
-const Container = styled.main`
-  position: relative;
-  margin-left: 15%;
-`;
-
-const Title = styled.h1`
-  font-weight: 500;
-`;
-
-const Section = styled.section`
-  margin-right: 10%;
-  transform: translateY(30%);
-`;
-const Content = styled.article`
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
+const Container = styled.section`
+  padding: min(1.3rem, 5rem);
+  text-align: right:
+max-width: 600px;
+  outline: dashed white;
+  @media screen and (max-width: 500px) {
+    margin: 1rem;
+  
+  }
 `;
 
 export default function About() {
   return (
     <>
+      <Head>
+        <title>Dani Opri</title>
+      </Head>
+      <StyledBigTitle>About</StyledBigTitle>
       <Container>
-        <Section>
-          <Title>Moin Moin</Title>
-          <Content>Here talking about self bla bla bla</Content>
-        </Section>
-        <Section>
-          <Title>Skills</Title>
-          <Content>
-            <br />
-            React
-            <br />
-            Node JS
-            <br />
-            Design system
-            <br />
-            Wireframing & Prototyping
-            <br />
-            Figma
-            <br />
-          </Content>
-        </Section>
+        <StyledBodyText>
+          Front-end developer who cares deeply about User Experience. Serious
+          passion for UI design and new technologies.
+        </StyledBodyText>
       </Container>
     </>
   );

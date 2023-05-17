@@ -28,6 +28,7 @@ export default function ContactForm() {
 
   return (
     <StyledContactForm>
+      {/* <h1>Contact Me</h1> */}
       <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input type="text" name="user_name" />
@@ -42,17 +43,22 @@ export default function ContactForm() {
 }
 
 const StyledContactForm = styled.div`
-  width: 400px;
+  width: 40%;
+  margin: 6rem;
+  outline: dashed white;
+  h1 {
+    font-size: clamp(1.2rem, 5vw + 0.1rem, 2rem);
+    line-height: 2em;
+    font-weight: 400;
+  }
   form {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
-    font-size: 16px;
     input {
       width: 100%;
       height: 35px;
-      padding: 7px;
       outline: none;
       border-radius: 5px;
       border: 1px solid rgb(220, 220, 220);
@@ -61,12 +67,10 @@ const StyledContactForm = styled.div`
       }
     }
     textarea {
-      max-width: 100%;
-      min-width: 100%;
       width: 100%;
       max-height: 100px;
       min-height: 100px;
-      padding: 7px;
+
       outline: none;
       border-radius: 5px;
       border: 1px solid rgb(220, 220, 220);
@@ -78,14 +82,26 @@ const StyledContactForm = styled.div`
       margin-top: 1rem;
     }
     input[type="submit"] {
+      width: 100%;
       margin-top: 2rem;
       cursor: pointer;
-      background: rgb(249, 105, 14);
+      background: grey;
       color: white;
       border: none;
       &:hover {
         color: black;
       }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    margin-top: 5rem;
+    margin-inline: auto;
+    width: 90%;
+    form,
+    input,
+    textarea,
+    input[type="submit"] {
     }
   }
 `;

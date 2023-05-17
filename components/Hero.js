@@ -1,26 +1,50 @@
 import styled from "styled-components";
 
-const StyledHeader = styled.header`
-  padding: 50px 100px;
-  font-size: 2rem;
+const Container = styled.header`
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // text-align: center;
+  // position: center;
+  // padding: 18rem 15rem;
+  // gap: 19px;
+  // position: relative;
+
+  display: grid;
+  place-items: center;
+  align-items: center;
+  height: 100vh;
+  h1 {
+    font-size: clamp(3rem, 10vw, 5rem);
+    letter-spacing: -4px;
+    line-height: 1.2em;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 8rem;
+  }
+  p {
+    font-size: clamp(1rem, 5vw, 2rem);
+    font-weight: 500;
+    line-height: 58px;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 5rem 4rem;
+
+    h1 {
+      font-weight: 500;
+      line-height: 3rem;
+    }
+    p {
+      font-weight: 400;
+    }
+  }
 `;
 
-const StyledCaption = styled.p`
-  color: #000;
-  line-height: -1rem;
-  letter-spacing: 0.3px;
-`;
-
-const Hero = () => {
+export default function Hero() {
   return (
-    <StyledHeader>
-      <h1>WebDev Dani</h1>
-      <StyledCaption>
-        Here an introduction yadda yadda
-        <br /> Then some more yadda yadda{" "}
-      </StyledCaption>
-    </StyledHeader>
+    <Container>
+      <h1> Dani Opri</h1>
+      <p> Front-end Developer and UX Designer</p>
+    </Container>
   );
-};
-
-export default Hero;
+}

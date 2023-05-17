@@ -5,42 +5,30 @@ export const GlobalStyles = createGlobalStyle`
   font-family: "Satoshi";
   src: url("../../asset/Satoshi/Satoshi-Variable.ttf");
   src: url("../../asset/Satoshi/Satoshi-Variable.ttf");
-  font-weight: 400;
-  font-style: normal;
+
 }
 
 :root {
-  font-family: Satoshi, sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-}
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
+ 
 }
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-a {
-  color: #fff;
-
-  text-decoration: none;
+html,
+body {
+  font-family: Satoshi, sans-serif;
+  
+  display: flex;
+  flex-direction: column;
 }
 
-a:hover {
-  text-decoration: line-through;
-}
 
-img {
-  max-width: 100%;
-  display: block;
-}
+
+
+
 
 `;

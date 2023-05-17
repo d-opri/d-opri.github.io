@@ -1,12 +1,22 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import styled from "styled-components";
 
 export default function Layout({ children }) {
   return (
-    <>
+    <PageContainer>
       <Navbar />
-      <main>{children}</main>
+      <Main>{children}</Main>
       <Footer />
-    </>
+    </PageContainer>
   );
 }
+
+const PageContainer = styled.div`
+  min-height: 100vh;
+  position: relative;
+`;
+
+const Main = styled.main`
+  padding-bottom: 3rem;
+`;
