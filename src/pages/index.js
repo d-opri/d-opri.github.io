@@ -1,7 +1,9 @@
 import styled from "styled-components";
-import Project from "../../components/Project";
+
 import Hero from "../../components/Hero";
 import ProjectSlide from "../../components/ProjectSlide";
+import { StyledBigTitle } from "../../components/Fonts";
+import Head from "next/head";
 
 const PROJECTS = [
   {
@@ -36,13 +38,18 @@ const PROJECTS = [
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Dani Opri</title>
+      </Head>
+      <StyledBigTitle>Moin Moin</StyledBigTitle>
+
       <Hero />
       <StyledList>
         {PROJECTS.map((project, index) => {
           return (
-            <li key={index}>
+            <StyledItem key={index}>
               <ProjectSlide {...project} />
-            </li>
+            </StyledItem>
           );
         })}
       </StyledList>
@@ -52,8 +59,14 @@ export default function Home() {
 
 const StyledList = styled.ul`
   list-style: none;
+  overflow: auto;
+  scroll-snap-type: y proximity;
   display: flex;
   gap: 4rem;
   flex-flow: column nowrap;
   outline: dashed red;
+`;
+
+const StyledItem = styled.li`
+  scroll-snap-align: start;
 `;

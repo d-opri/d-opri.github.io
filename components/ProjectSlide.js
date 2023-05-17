@@ -24,7 +24,7 @@ const ProjectSlide = ({ title, stack, description, alt, image }) => {
       </TextContainer>
       <ImageContainer>
         <StyledImage height={644} width={500} alt={alt} src={image} />
-        <StyledImage height={644} width={500} alt={alt} src={image} />
+        {/* <StyledImage height={644} width={500} alt={alt} src={image} /> */}
       </ImageContainer>
     </Container>
   );
@@ -86,7 +86,7 @@ const ImageContainer = styled.figure`
   flex-flow: column nowrap;
   gap: 2rem;
   outline: dashed white;
-  width: min(100%, 1000px);
+  width: min(30%, 50%);
 `;
 
 const StyledImage = styled(Image)`

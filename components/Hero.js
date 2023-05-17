@@ -1,14 +1,18 @@
 import styled from "styled-components";
 
 const Container = styled.header`
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // text-align: center;
+  // position: center;
+  // padding: 18rem 15rem;
+  // gap: 19px;
+  // position: relative;
+
+  display: grid;
+  place-items: center;
   align-items: center;
-  text-align: center;
-  position: center;
-  padding: 18rem 15rem;
-  gap: 19px;
-  position: relative;
   height: 100vh;
   h1 {
     font-size: clamp(3rem, 10vw, 5rem);

@@ -28,7 +28,7 @@ export default function ContactForm() {
 
   return (
     <StyledContactForm>
-      <h1>Contact Me</h1>
+      {/* <h1>Contact Me</h1> */}
       <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input type="text" name="user_name" />
