@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import Container from "./Container";
 
-const Container = styled.header`
+const Header = styled.header`
   text-align: center;
   line-height: 3rem;
 `;
@@ -8,8 +9,10 @@ const Container = styled.header`
 export default function Hero() {
   return (
     <Container>
-      <h1> Dani Opri</h1>
-      <p> Front-end Developer and UX Designer</p>
+      <Header>
+        <h1> Dani Opri</h1>
+        <p> Front-end Developer and UX Designer</p>
+      </Header>
     </Container>
   );
 }
