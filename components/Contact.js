@@ -1,8 +1,9 @@
+import styled from "styled-components";
+import Container from "./Container";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import styled from "styled-components";
 
-export default function ContactForm() {
+export default function Contact() {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -25,40 +26,32 @@ export default function ContactForm() {
         }
       );
   };
-
   return (
-    <StyledContactForm>
-      {/* <h1>Contact Me</h1> */}
-      <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
-      </form>
-    </StyledContactForm>
+    <Container id="Contact" title="Contact">
+      <StyledContactForm>
+        <form ref={form} onSubmit={sendEmail}>
+          <label>Name</label>
+          <input type="text" name="user_name" />
+          <label>Email</label>
+          <input type="email" name="user_email" />
+          <label>Message</label>
+          <textarea name="message" />
+          <input type="submit" value="Send" />
+        </form>
+      </StyledContactForm>
+    </Container>
   );
 }
 
 const StyledContactForm = styled.div`
-  width: 40%;
-  margin: 6rem;
-  outline: dashed white;
-  h1 {
-    font-size: clamp(1.2rem, 5vw + 0.1rem, 2rem);
-    line-height: 2em;
-    font-weight: 400;
-  }
   form {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    width: 100%;
+
     input {
       width: 100%;
-      height: 35px;
+      height: 2.5rem;
       outline: none;
       border-radius: 5px;
       border: 1px solid rgb(220, 220, 220);
@@ -68,9 +61,7 @@ const StyledContactForm = styled.div`
     }
     textarea {
       width: 100%;
-      max-height: 100px;
-      min-height: 100px;
-
+      height: 10rem;
       outline: none;
       border-radius: 5px;
       border: 1px solid rgb(220, 220, 220);
@@ -82,7 +73,6 @@ const StyledContactForm = styled.div`
       margin-top: 1rem;
     }
     input[type="submit"] {
-      width: 100%;
       margin-top: 2rem;
       cursor: pointer;
       background: grey;
@@ -91,17 +81,6 @@ const StyledContactForm = styled.div`
       &:hover {
         color: black;
       }
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    margin-top: 5rem;
-    margin-inline: auto;
-    width: 90%;
-    form,
-    input,
-    textarea,
-    input[type="submit"] {
     }
   }
 `;

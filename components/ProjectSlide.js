@@ -12,19 +12,18 @@ const ProjectSlide = ({ title, stack, description, alt, image }) => {
               return (
                 <StyledTag key={index}>
                   <p>
-                    {index > 0 ? `*` : ""} {tag}
+                    {index > 0 ? ` * ` : ""} {tag}
                   </p>
                 </StyledTag>
               );
             })}
           </StyledTagGroup>
 
-          <Description>{description} </Description>
+          <p>{description} </p>
         </StyledBody>
       </TextContainer>
       <ImageContainer>
-        <StyledImage height={644} width={500} alt={alt} src={image} />
-        {/* <StyledImage height={644} width={500} alt={alt} src={image} /> */}
+        <StyledImage height={612} width={300} alt={alt} src={image} />
       </ImageContainer>
     </Container>
   );
@@ -36,60 +35,44 @@ const Container = styled.section`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  padding: min(1.3rem, 5rem);
-  margin-inline: auto;
-  max-width: 100%;
-  gap: 2rem;
-  outline: dashed white;
+  gap: 1rem;
 `;
 
 const TextContainer = styled.section`
-  gap: 3rem;
+  gap: 2.7rem;
   display: flex;
   flex-flow: column wrap;
-  outline: dashed white;
-  width: min(100%, 800px);
 `;
 
 const StyledTitle = styled.h1`
-  font-size: clamp(3rem, 10vw + 1rem, 5rem);
-  letter-spacing: -4px;
-  line-height: 1.2em;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  letter-spacing: 0.005em;
 `;
 
 const StyledBody = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  gap: 1.5rem;
-  outline: dashed white;
+  gap: 0.5rem;
 `;
 
 const StyledTagGroup = styled.ul`
   display: flex;
   flex-flow: row wrap;
-  gap: 1rem;
   list-style: none;
 `;
 
 const StyledTag = styled.li`
   color: rgba(155, 155, 155, 1);
-  font-size: 0.9rem;
-`;
-
-const Description = styled.p`
-  font-size: clamp(0.8rem, 5vw + 0.1rem, 1rem);
-  line-height: 1.6em;
 `;
 
 const ImageContainer = styled.figure`
   display: flex;
   flex-flow: column nowrap;
-  gap: 2rem;
-  outline: dashed white;
-  width: min(30%, 50%);
 `;
 
 const StyledImage = styled(Image)`
   width: 100%;
-  outline: dashed white;
 `;
