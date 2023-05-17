@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
 
 :root {
   font-family: Satoshi, sans-serif;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 html,
