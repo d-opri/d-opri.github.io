@@ -6,7 +6,7 @@ export const GlobalStyles = createGlobalStyle`
   font-family: "Satoshi";
   src: url("../../asset/Satoshi/Satoshi-Variable.ttf");
   src: url("../../asset/Satoshi/Satoshi-Variable.ttf");
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -20,13 +20,30 @@ body {
   background-color: rgb(0, 0, 0);
   height: 100%;
   color: #fff;
-  
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+h1 {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+h2 {
+  font-weight: 800;
+  font-size: 3.5rem;
+  letter-spacing: 0.105em;
+  text-transform: uppercase;
+  line-height: 4.8rem;
+}
+p {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  letter-spacing: -0.005em;
 }
 
 a {

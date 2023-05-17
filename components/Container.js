@@ -1,16 +1,31 @@
 import React from "react";
 import styled from "styled-components";
 
-const Container = ({ children }) => {
-  return <StyledContainer>{children}</StyledContainer>;
+const Container = ({ children, title, id }) => {
+  return (
+    <StyledContainer id={id}>
+      <StyledTitle>
+        <h2>{title}</h2>{" "}
+      </StyledTitle>
+      <StyledContent>{children}</StyledContent>
+    </StyledContainer>
+  );
 };
 
 const StyledContainer = styled.section`
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  justify-content: space-around;
+  min-height: 90vh;
+  scroll-snap-align: start;
+`;
+
+const StyledTitle = styled.div`
+  text-align: left;
+`;
+
+const StyledContent = styled.div`
+  margin: 2.25rem;
 `;
 
 export default Container;

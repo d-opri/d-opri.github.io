@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 export default function Navbar() {
   const [toggleMenue, setToggleMenue] = useState(false);
@@ -35,13 +35,40 @@ export default function Navbar() {
       {(toggleMenue || width > 500) && (
         <ul>
           <li>
-            <Link href="/">Work</Link>
+            <Link
+              activeClass="active"
+              to="work"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Work
+            </Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link
+              activeClass="active"
+              to="About"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              About
+            </Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       )}

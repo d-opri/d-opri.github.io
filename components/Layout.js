@@ -16,4 +16,5 @@ const PageContainer = styled.div``;
 
 const Main = styled.main`
   padding-bottom: 3rem;
+  margin: 1rem;
 `;
