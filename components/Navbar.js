@@ -37,13 +37,13 @@ export default function Navbar() {
           <li>
             <Link
               activeClass="active"
-              to="work"
+              to="Skills"
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
             >
-              Work
+              Skills
             </Link>
           </li>
           <li>

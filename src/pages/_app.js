@@ -6,7 +6,7 @@ export const GlobalStyles = createGlobalStyle`
   font-family: "Satoshi";
   src: url("../../asset/Satoshi/Satoshi-Variable.ttf");
   src: url("../../asset/Satoshi/Satoshi-Variable.ttf");
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -44,6 +44,7 @@ p {
   font-size: 1.3rem;
   line-height: 1.8rem;
   letter-spacing: -0.005em;
+  font-weight: 300;
 }
 
 a {

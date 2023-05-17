@@ -15,7 +15,8 @@ const Container = ({ children, title, id }) => {
 const StyledContainer = styled.section`
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: start;
+  gap: 10rem;
   min-height: 90vh;
   scroll-snap-align: start;
 `;

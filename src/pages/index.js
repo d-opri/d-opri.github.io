@@ -5,6 +5,7 @@ import ProjectSlide from "../../components/ProjectSlide";
 import { StyledBigTitle } from "../../components/Fonts";
 import Head from "next/head";
 import About from "../../components/About";
+import Skills from "../../components/Skills";
 
 const PROJECTS = [
   {
@@ -46,6 +47,7 @@ export default function Home() {
 
       <Hero />
       <About />
+      <Skills />
       {/* <StyledList>
         {PROJECTS.map((project, index) => {
           return (
