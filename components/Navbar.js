@@ -37,18 +37,6 @@ export default function Navbar() {
           <li>
             <Link
               activeClass="active"
-              to="Skills"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link
-              activeClass="active"
               to="About"
               spy={true}
               smooth={true}
@@ -61,7 +49,31 @@ export default function Navbar() {
           <li>
             <Link
               activeClass="active"
-              to="contact"
+              to="Work"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Work
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="Skills"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="Contact"
               spy={true}
               smooth={true}
               offset={-70}
