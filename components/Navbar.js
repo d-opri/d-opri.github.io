@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
+import Image from "next/image";
 
 export default function Navbar() {
   const [toggleMenue, setToggleMenue] = useState(false);
@@ -29,8 +30,9 @@ export default function Navbar() {
       <StyledLink href="/">
         <h1>Dev</h1>
       </StyledLink>
+      <StyledImage height={45} width={24} alt="Logo" src="Logo.svg" />
       <button type="button" onClick={toggleNav}>
-        X
+        <Image height={24} width={24} alt="Menue" src="/HamburgerMenue.svg" />
       </button>
       {(toggleMenue || width > 500) && (
         <ul>
@@ -122,11 +124,12 @@ const StyledNav = styled.nav`
   }
   @media screen and (max-width: 500px) {
     height: auto;
-    flex-flow: column;
+    flex-flow: row wrap;
     gap: 2rem;
 
     ul {
       flex-flow: column;
+      width: 100%;
       padding-block: 2rem;
       gap: 3rem;
       align-items: center;
@@ -145,5 +148,13 @@ const StyledNav = styled.nav`
 const StyledLink = styled(Link)`
   @media screen and (max-width: 500px) {
     display: none;
+  }
+`;
+
+const StyledImage = styled(Image)`
+  display: none;
+
+  @media screen and (max-width: 500px) {
+    display: block;
   }
 `;
