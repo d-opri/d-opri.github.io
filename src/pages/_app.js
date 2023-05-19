@@ -56,6 +56,23 @@ a:hover {
   text-decoration: line-through;
 }
 
+
+@media screen and (min-width: 834px) {
+h2 {
+font-size: 9.3rem;
+line-height: 12.8rem;
+letter-spacing: 0.105em;
+}
+  p {
+font-style: normal;
+font-weight: 400;
+font-size: 2.25rem;
+line-height: 3.125rem;
+letter-spacing: -0.005em;
+  }
+
+}
+
 `;
 
 export default function App({ Component, pageProps }) {

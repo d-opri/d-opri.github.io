@@ -4,10 +4,10 @@ import styled from "styled-components";
 const Container = ({ children, title, id }) => {
   return (
     <StyledContainer id={id}>
-      <StyledTitle>
+      <span>
         <h2>{title}</h2>{" "}
-      </StyledTitle>
-      <StyledContent>{children}</StyledContent>
+      </span>
+      <div>{children}</div>
     </StyledContainer>
   );
 };
@@ -19,14 +19,20 @@ const StyledContainer = styled.section`
   gap: 10rem;
   min-height: 90vh;
   scroll-snap-align: start;
-`;
+  span {
+    text-align: left;
+  }
+  div {
+    margin: 2.25rem;
+  }
 
-const StyledTitle = styled.div`
-  text-align: left;
-`;
-
-const StyledContent = styled.div`
-  margin: 2.25rem;
+  @media screen and (min-width: 834px) {
+    min-height: 125vh;
+    div {
+      text-align: right;
+      padding: 0 6.25rem;
+    }
+  }
 `;
 
 export default Container;
