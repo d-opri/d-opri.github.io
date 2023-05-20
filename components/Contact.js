@@ -27,7 +27,7 @@ export default function Contact() {
       );
   };
   return (
-    <Container id="Contact" title="Contact">
+    <Container id="Contact" title="Cont">
       <StyledContactForm>
         <form ref={form} onSubmit={sendEmail}>
           <label>Name</label>
@@ -43,44 +43,45 @@ export default function Contact() {
   );
 }
 
-const StyledContactForm = styled.div`
-  form {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+const StyledContactForm = styled.span`
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  text-align: left;
 
-    input {
-      width: 100%;
-      height: 2.5rem;
-      outline: none;
-      border-radius: 5px;
-      border: 1px solid rgb(220, 220, 220);
-      &:focus {
-        border: 2px solid rgba(0, 206, 158, 1);
-      }
+  input {
+    width: 100%;
+    height: 2.5rem;
+    outline: none;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid rgb(220, 220, 220);
+    &:focus {
+      border: 2px solid rgba(0, 206, 158, 1);
     }
-    textarea {
-      width: 100%;
-      height: 10rem;
-      outline: none;
-      border-radius: 5px;
-      border: 1px solid rgb(220, 220, 220);
-      &:focus {
-        border: 2px solid rgba(0, 206, 158, 1);
-      }
+  }
+  textarea {
+    width: 100%;
+    height: 10rem;
+    outline: none;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid rgb(220, 220, 220);
+    &:focus {
+      border: 2px solid rgba(0, 206, 158, 1);
     }
-    label {
-      margin-top: 1rem;
-    }
-    input[type="submit"] {
-      margin-top: 2rem;
-      cursor: pointer;
-      background: grey;
-      color: white;
-      border: none;
-      &:hover {
-        color: black;
-      }
+  }
+  label {
+    margin-top: 1rem;
+  }
+  input[type="submit"] {
+    margin-top: 2rem;
+    cursor: pointer;
+    background: grey;
+    color: white;
+    border: none;
+    &:hover {
+      color: black;
     }
   }
 `;

@@ -44,7 +44,6 @@ const ListContainer = styled.div`
 
 const ListGroup = styled.ul`
   text-align: right;
-
   flex-grow: 1;
   list-style: none;
 `;

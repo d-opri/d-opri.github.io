@@ -44,7 +44,7 @@ const ProjectContainer = styled.article`
 `;
 
 const TextContainer = styled.section`
-  flex-basis: 300px;
+  flex-basis: 450px;
   flex-grow: 9999;
   display: flex;
   flex-flow: column wrap;
@@ -55,12 +55,13 @@ const TextContainer = styled.section`
     font-size: 3.5rem;
     letter-spacing: 0.105em;
     text-transform: uppercase;
-    line-height: 4.8rem;
+    line-height: 6rem;
   }
   ul {
     display: flex;
     flex-flow: row wrap;
     list-style: none;
+    padding: 0.5rem 0 1rem 0;
   }
 
   li {
