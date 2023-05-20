@@ -50,10 +50,12 @@ p {
 a {
   color: #fff;
   text-decoration: none;
+  transition: 0.7s ease;
 }
 
 a:hover {
-  text-decoration: line-through;
+  // text-decoration: line-through;
+  color: dodgerblue;
 }
 
 

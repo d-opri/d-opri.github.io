@@ -30,9 +30,23 @@ export default function Navbar() {
       <StyledLink href="/">
         <h1>Dev</h1>
       </StyledLink>
-      <StyledImage height={45} width={24} alt="Logo" src="Logo.svg" />
+      <StyledLogo height={45} width={24} alt="Logo" src="Logo.svg" />
       <button type="button" onClick={toggleNav}>
-        <Image height={24} width={24} alt="Menue" src="/HamburgerMenue.svg" />
+        {!toggleMenue ? (
+          <HamburgerMenue
+            height={24}
+            width={24}
+            alt="Menue"
+            src="/HamburgerMenue.svg"
+          />
+        ) : (
+          <CloseMenue
+            height={24}
+            width={24}
+            alt="Menue"
+            src="/CloseMenue.svg"
+          />
+        )}
       </button>
       {(toggleMenue || width > 500) && (
         <ul>
@@ -151,10 +165,13 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const StyledImage = styled(Image)`
+const StyledLogo = styled(Image)`
   display: none;
 
   @media screen and (max-width: 500px) {
     display: block;
   }
 `;
+
+const HamburgerMenue = styled(Image)``;
+const CloseMenue = styled(Image)``;
