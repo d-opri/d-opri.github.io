@@ -59,7 +59,7 @@ export default function Navbar() {
               offset={-70}
               duration={500}
             >
-              About
+              <a onClick={toggleNav}>About</a>
             </Link>
           </li>
           <li>
@@ -71,7 +71,7 @@ export default function Navbar() {
               offset={-70}
               duration={500}
             >
-              Work
+              <a onClick={toggleNav}>Work</a>
             </Link>
           </li>
           <li>
@@ -83,7 +83,7 @@ export default function Navbar() {
               offset={-70}
               duration={500}
             >
-              Skills
+              <a onClick={toggleNav}>Skills</a>
             </Link>
           </li>
           <li>
@@ -95,7 +95,7 @@ export default function Navbar() {
               offset={-70}
               duration={500}
             >
-              Contact
+              <a onClick={toggleNav}>Contact</a>
             </Link>
           </li>
         </ul>
@@ -116,7 +116,7 @@ const StyledNav = styled.nav`
     background-color: rgba(0, 0, 0, 0.7);
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 1000;
   ul {
     display: flex;
     gap: 4rem;

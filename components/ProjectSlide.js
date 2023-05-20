@@ -42,6 +42,9 @@ const TextContainer = styled.section`
   gap: 2.7rem;
   display: flex;
   flex-flow: column wrap;
+
+  flex-basis: 500px;
+  flex-grow: 9999;
 `;
 
 const StyledTitle = styled.h1`
@@ -71,6 +74,9 @@ const StyledTag = styled.li`
 const ImageContainer = styled.figure`
   display: flex;
   flex-flow: column nowrap;
+
+  flex-basis: 300px;
+  flex-grow: 1;
 `;
 
 const StyledImage = styled(Image)`
