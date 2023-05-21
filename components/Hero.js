@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import Container from "./Container";
+import HiddenElement from "./Container";
 
 export default function Hero() {
   return (
-    <Container>
+    <HiddenElement id="Hero">
       <StyledHero>
         <h1> Dani Opri</h1>
         <p> Front-end Developer and UX Designer</p>
       </StyledHero>
-    </Container>
+    </HiddenElement>
   );
 }
 

@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import Container from "./Container";
+import HiddenElement from "./Container";
 
 export default function Skills() {
   return (
-    <Container id="Skills" title="Skills">
+    <HiddenElement id="Skills" title="Skills">
       <ListContainer>
         <ListGroup>
           <li>
@@ -28,7 +28,7 @@ export default function Skills() {
           </li>
         </ListGroup>
       </ListContainer>
-    </Container>
+    </HiddenElement>
   );
 }
 

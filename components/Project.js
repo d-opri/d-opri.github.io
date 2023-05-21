@@ -1,9 +1,18 @@
 import styled from "styled-components";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
 export default function Project({ title, stack, description, image }) {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0,
+    rootMargin: "0px 0px -50% 0px",
+  });
+
+  const containerClassName = `hidden ${inView ? "show" : ""}`;
+
   return (
-    <ProjectContainer>
+    <ProjectContainer ref={ref} className={containerClassName}>
       <TextContainer>
         <h1>{title}</h1>
         <ul>

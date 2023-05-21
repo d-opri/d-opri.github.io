@@ -58,6 +58,18 @@ a:hover {
   color: dodgerblue;
 }
 
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
 
 // @media screen and (min-width: 834px) {
 // h2 {

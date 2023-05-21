@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import Container from "./Container";
+import HiddenElement from "./Container";
 import Project from "./Project";
 import { PROJECTS } from "./projectDB";
 
 export default function Work() {
   return (
-    <Container id="Work" title="Work">
+    <HiddenElement id="Work" title="Work">
       <StyledList>
         {PROJECTS.map((project, index) => {
           return (
@@ -15,7 +15,7 @@ export default function Work() {
           );
         })}
       </StyledList>
-    </Container>
+    </HiddenElement>
   );
 }
 

@@ -25,10 +25,25 @@ export default function Navbar() {
     };
   }, []);
 
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <StyledNav>
-      <StyledLink href="/">
-        <h1>Dev</h1>
+      <StyledLink
+        href="/"
+        activeClass="active"
+        to="About"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        <a onClick={goToTop}>Dev</a>
       </StyledLink>
       <StyledLogo height={45} width={24} alt="Logo" src="Logo.svg" />
       <button type="button" onClick={toggleNav}>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Container from "./Container";
+import HiddenElement from "./Container";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -27,7 +27,7 @@ export default function Contact() {
       );
   };
   return (
-    <Container id="Contact" title="Cont">
+    <HiddenElement id="Contact" title="Cont">
       <StyledContactForm>
         <form ref={form} onSubmit={sendEmail}>
           <label>Name</label>
@@ -39,7 +39,7 @@ export default function Contact() {
           <input type="submit" value="Send" />
         </form>
       </StyledContactForm>
-    </Container>
+    </HiddenElement>
   );
 }
 

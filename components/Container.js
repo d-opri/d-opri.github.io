@@ -1,16 +1,25 @@
 import React from "react";
 import styled from "styled-components";
+import { useInView } from "react-intersection-observer";
 
-const Container = ({ children, title, id }) => {
+export default function HiddenElement({ children, title, id }) {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0,
+    rootMargin: "0px 0px -50% 0px",
+  });
+
+  const containerClassName = `hidden ${inView ? "show" : ""}`;
+
   return (
-    <StyledContainer id={id}>
+    <StyledContainer ref={ref} id={id} className={containerClassName}>
       <span>
         <h1>{title}</h1>{" "}
       </span>
       <div>{children}</div>
     </StyledContainer>
   );
-};
+}
 
 const StyledContainer = styled.section`
   display: flex;
@@ -40,9 +49,11 @@ const StyledContainer = styled.section`
     text-align: left;
     position: relative;
     top: -3rem;
+    transition-delay: 200ms;
   }
   div {
     margin: 2.25rem;
+    transition-delay: 500ms;
   }
 
   @media screen and (min-width: 834px) {
@@ -54,5 +65,3 @@ const StyledContainer = styled.section`
     }
   }
 `;
-
-export default Container;
