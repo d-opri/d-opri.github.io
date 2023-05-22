@@ -34,17 +34,7 @@ export default function Navbar() {
 
   return (
     <StyledNav>
-      <StyledLink
-        href="/"
-        activeClass="active"
-        to="About"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-      >
-        <a onClick={goToTop}>Dev</a>
-      </StyledLink>
+      <StyledA onClick={goToTop}>Dev</StyledA>
       <StyledLogo height={45} width={24} alt="Logo" src="Logo.svg" />
       <button type="button" onClick={toggleNav}>
         {!toggleMenue ? (
@@ -136,13 +126,12 @@ const StyledNav = styled.nav`
     display: flex;
     gap: 4rem;
     list-style: none;
-    cursor: pointer;
+
     
   }
   button {
     display: none;
  align-self: flex-end;
-   
     border: none;
     background: transparent;
     color: #fff;
@@ -174,7 +163,7 @@ const StyledNav = styled.nav`
   }
 `;
 
-const StyledLink = styled(Link)`
+const StyledA = styled.a`
   @media screen and (max-width: 500px) {
     display: none;
   }

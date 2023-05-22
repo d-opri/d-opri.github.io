@@ -51,11 +51,12 @@ a {
   color: #fff;
   text-decoration: none;
   transition: 0.7s ease;
+  cursor: pointer;
 }
 
 a:hover {
   // text-decoration: line-through;
-  color: dodgerblue;
+  color: #80CFF9;
 }
 
 .hidden {
