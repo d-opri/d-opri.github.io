@@ -34,10 +34,10 @@ export default function Navbar() {
 
   return (
     <StyledNav>
-      <StyledA onClick={goToTop}>
+      <a onClick={goToTop}>
         <Image height={45} width={24} alt="Logo" src="Logo.svg" />
-      </StyledA>
-      <StyledLogo height={45} width={24} alt="Logo" src="Logo.svg" />
+      </a>
+      {/* <StyledLogo height={45} width={24} alt="Logo" src="Logo.svg" /> */}
       <button type="button" onClick={toggleNav}>
         {!toggleMenue ? (
           <HamburgerMenue
@@ -167,18 +167,18 @@ const StyledNav = styled.nav`
   }
 `;
 
-const StyledA = styled.a`
-  @media screen and (max-width: 500px) {
-    display: none;
-  }
-`;
+// const StyledA = styled.a`
+//   @media screen and (max-width: 500px) {
+//     display: none;
+//   }
+// `;
 
-const StyledLogo = styled(Image)`
-  display: none;
-  @media screen and (max-width: 500px) {
-    display: block;
-  }
-`;
+// const StyledLogo = styled(Image)`
+//   display: none;
+//   @media screen and (max-width: 500px) {
+//     display: block;
+//   }
+// `;
 
 const HamburgerMenue = styled(Image)``;
 const CloseMenue = styled(Image)``;
