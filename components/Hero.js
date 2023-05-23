@@ -18,8 +18,8 @@ const StyledHero = styled.section`
   width: 100%;
 
   h1 {
-    // font-style: italic;
-    font-size: 7.188rem;
+    font-style: italic;
+    font-size: 9rem;
   }
 
   p {
@@ -30,6 +30,7 @@ const StyledHero = styled.section`
     height: 70vh;
     margin-bottom: 2rem;
     text-align: center;
+
     h1 {
       font-size: 4rem;
     }

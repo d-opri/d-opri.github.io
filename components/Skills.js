@@ -34,16 +34,23 @@ export default function Skills() {
 
 const ListContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-  gap: 2rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 76px;
   p {
-    line-height: 2.8rem;
+    font-size: 21px;
+    line-height: 160%;
+    letter-spacing: -0.035em;
   }
 `;
 
 const ListGroup = styled.ul`
-  text-align: right;
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 30px;
   list-style: none;
 `;

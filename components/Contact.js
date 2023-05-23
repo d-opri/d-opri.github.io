@@ -27,7 +27,7 @@ export default function Contact() {
       );
   };
   return (
-    <HiddenElement id="Contact" title="Cont">
+    <HiddenElement id="Contact" title="Contact">
       <StyledContactForm>
         <form ref={form} onSubmit={sendEmail}>
           <label>Name</label>

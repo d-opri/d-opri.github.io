@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import HiddenElement from "./Container";
 
 export default function About() {

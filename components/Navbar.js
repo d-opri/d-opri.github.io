@@ -34,7 +34,9 @@ export default function Navbar() {
 
   return (
     <StyledNav>
-      <StyledA onClick={goToTop}>Dev</StyledA>
+      <StyledA onClick={goToTop}>
+        <Image height={45} width={24} alt="Logo" src="Logo.svg" />
+      </StyledA>
       <StyledLogo height={45} width={24} alt="Logo" src="Logo.svg" />
       <button type="button" onClick={toggleNav}>
         {!toggleMenue ? (
@@ -117,17 +119,20 @@ const StyledNav = styled.nav`
     padding: 1rem 2rem;
     align-items: center;
     position: fixed;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    backdrop-filter: blur(15px);
     top: 0;
     width: 100%;
     z-index: 1000;
+    height: 6.25rem;
+   
   ul {
     display: flex;
-    gap: 4rem;
     list-style: none;
-
-    
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 7rem;    
   }
   button {
     display: none;
@@ -157,7 +162,6 @@ const StyledNav = styled.nav`
     }
     button {
       display: block;
-     
       }
     }
   }
@@ -171,7 +175,6 @@ const StyledA = styled.a`
 
 const StyledLogo = styled(Image)`
   display: none;
-
   @media screen and (max-width: 500px) {
     display: block;
   }

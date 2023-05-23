@@ -9,9 +9,9 @@ export default function Work() {
       <StyledList>
         {PROJECTS.map((project, index) => {
           return (
-            <StyledItem key={index}>
+            <li key={index}>
               <Project {...project} />
-            </StyledItem>
+            </li>
           );
         })}
       </StyledList>
@@ -19,11 +19,21 @@ export default function Work() {
   );
 }
 
+// const StyledSection = styled(HiddenElement)`
+//   && @media screen and (min-width: 834px) {
+//     flex-direction: row wrap;
+//     align-items: flex-start;
+//     gap: 32px;
+
+//     li {
+//       margin-bottom: 56px;
+//     }
+//   }
+// `;
+
 const StyledList = styled.ul`
   list-style: none;
   display: flex;
-  gap: 7rem;
   flex-flow: column nowrap;
+  gap: 4.688rem;
 `;
-
-const StyledItem = styled.li``;

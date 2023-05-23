@@ -15,26 +15,28 @@ export default function Project({ title, stack, description, image }) {
     <ProjectContainer ref={ref} className={containerClassName}>
       <TextContainer>
         <h1>{title}</h1>
-        <ul>
-          {stack.map((tag, index) => {
-            return (
-              <li key={index}>
-                <p>
-                  {index > 0 ? ` * ` : ""} {tag}
-                </p>
-              </li>
-            );
-          })}
-        </ul>
-        <p>{description} </p>
+        <div>
+          <ul>
+            {stack.map((tag, index) => {
+              return (
+                <li key={index}>
+                  <p>
+                    {index > 0 ? ` * ` : ""} {tag}
+                  </p>
+                </li>
+              );
+            })}
+          </ul>
+          <p>{description} </p>
+        </div>
       </TextContainer>
       <ImageContainer>
         {image.map((source, index) => {
           return (
-            <Image
+            <StyledImage
               key={index}
-              height={612}
-              width={300}
+              height={323}
+              width={350}
               alt={source.alt}
               src={source.img}
             />
@@ -47,24 +49,40 @@ export default function Project({ title, stack, description, image }) {
 
 const ProjectContainer = styled.article`
   display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  @media screen and (min-width: 834px) {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 `;
 
 const TextContainer = styled.section`
-  flex-basis: 450px;
-  flex-grow: 9999;
   display: flex;
-  flex-flow: column wrap;
-  text-align: left;
+  flex-direction: column;
 
+  gap: 1.75rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 0.75rem;
+  }
   h1 {
-    font-weight: 800;
-    font-size: 3.5rem;
-    letter-spacing: 0.105em;
-    text-transform: uppercase;
-    line-height: 6rem;
+    font-weight: 500;
+    font-size: 1.563rem;
+    line-height: 26px;
+    letter-spacing: -0.035em;
+  }
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.045em;
   }
   ul {
     display: flex;
@@ -72,17 +90,39 @@ const TextContainer = styled.section`
     list-style: none;
     padding: 0.5rem 0 1rem 0;
   }
-
   li {
     color: rgba(155, 155, 155, 1);
+  }
+
+  @media screen and (min-width: 834px) {
+    width: 31.563rem;
+    height: 34.375rem;
+
+    h1 {
+      font-weight: 500;
+      font-size: 4.688rem;
+      line-height: 91px;
+      letter-spacing: 0.005em;
+      text-align: left;
+    }
+
+    p {
+      font-size: 1.75rem;
+      line-height: 38px;
+      letter-spacing: 0.01em;
+      text-align: left;
+    }
   }
 `;
 
 const ImageContainer = styled.figure`
-  flex-basis: 300px;
-  flex-grow: 1;
   display: flex;
   flex-flow: column nowrap;
-  gap: 2rem;
+  gap: 1.875rem;
   align-items: center;
+`;
+const StyledImage = styled(Image)`
+  @media screen and (min-width: 834px) {
+    width: 37.75rem;
+    height: 34.375rem;
 `;

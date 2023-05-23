@@ -14,7 +14,7 @@ export default function HiddenElement({ children, title, id }) {
   return (
     <StyledContainer ref={ref} id={id} className={containerClassName}>
       <span>
-        <h1>{title}</h1>{" "}
+        <StyledTitle>{title}</StyledTitle>{" "}
       </span>
       <div>{children}</div>
     </StyledContainer>
@@ -22,46 +22,48 @@ export default function HiddenElement({ children, title, id }) {
 }
 
 const StyledContainer = styled.section`
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: start;
-  gap: 5rem;
-  min-height: 100vh;
+  gap: 3.8rem;
   scroll-snap-align: start;
-  margin-bottom: 4rem;
-
-  h1 {
-    font-weight: 800;
-    font-size: 5rem;
-    letter-spacing: 0.105em;
-    text-transform: uppercase;
-    line-height: 4.8rem;
-  }
-
-  p {
-    font-size: 1.3rem;
-    line-height: 1.8rem;
-    letter-spacing: -0.005em;
-    font-weight: 300;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
   span {
-    text-align: left;
-    position: relative;
-    top: -3rem;
     transition-delay: 200ms;
   }
   div {
-    margin: 2.25rem;
     transition-delay: 500ms;
   }
 
   @media screen and (min-width: 834px) {
     min-height: 125vh;
+    width: 83.813rem;
 
     div {
       text-align: right;
       padding: 0 6.25rem;
+      align-self: flex-end;
     }
+    p {
+      font-size: 36px;
+      line-height: 50px;
+      letter-spacing: -0.005em;
+    }
+  }
+`;
+
+const StyledTitle = styled.h1`
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3.125rem;
+  line-height: 51px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 834px) {
+    font-weight: 500;
+    font-size: 4.688rem;
+    line-height: 12.875rem;
+    letter-spacing: 0.105em;
   }
 `;
