@@ -33,9 +33,10 @@ const StyledContainer = styled.section`
   }
   div {
     transition-delay: 500ms;
+    z-index: 9;
   }
 
-  @media screen and (min-width: 834px) {
+  @media screen and (min-width: 1200px) {
     min-height: 125vh;
     width: 83.813rem;
 
@@ -49,6 +50,11 @@ const StyledContainer = styled.section`
       line-height: 50px;
       letter-spacing: -0.005em;
     }
+    span {
+      transition: transform 0.5s ease-out 0s;
+      opacity: 30%;
+      color: grey;
+    }
   }
 `;
 
@@ -60,10 +66,12 @@ const StyledTitle = styled.h1`
   letter-spacing: 0.07em;
   text-transform: uppercase;
 
-  @media screen and (min-width: 834px) {
+  @media screen and (min-width: 1200px) {
     font-weight: 500;
-    font-size: 4.688rem;
+    // font-size: 4.688rem;
+    font-size: 12.5rem;
     line-height: 12.875rem;
     letter-spacing: 0.105em;
+    transform: translateX(50.2466%);
   }
 `;
