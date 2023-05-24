@@ -13,8 +13,8 @@ export default function Home() {
       </Head>
       <Hero />
       <About />
-      <Work />
       <Skills />
+      <Work />
       <Contact />
     </>
   );

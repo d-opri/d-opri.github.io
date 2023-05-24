@@ -81,7 +81,7 @@ export default function Navbar() {
               <a onClick={toggleNav}>Work</a>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               activeClass="active"
               to="Skills"
@@ -92,7 +92,7 @@ export default function Navbar() {
             >
               <a onClick={toggleNav}>Skills</a>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               activeClass="active"
