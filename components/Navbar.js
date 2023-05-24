@@ -34,9 +34,9 @@ export default function Navbar() {
 
   return (
     <StyledNav>
-      <a onClick={goToTop}>
+      {/* <a onClick={goToTop}>
         <Image height={45} width={24} alt="Logo" src="Logo.svg" />
-      </a>
+      </a> */}
       {/* <StyledLogo height={45} width={24} alt="Logo" src="Logo.svg" /> */}
       <button type="button" onClick={toggleNav}>
         {!toggleMenue ? (
@@ -57,19 +57,7 @@ export default function Navbar() {
       </button>
       {(toggleMenue || width > 500) && (
         <ul>
-          <li>
-            <Link
-              activeClass="active"
-              to="About"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <a onClick={toggleNav}>About</a>
-            </Link>
-          </li>
-          <li>
+          <LeftItem>
             <Link
               activeClass="active"
               to="Work"
@@ -80,20 +68,21 @@ export default function Navbar() {
             >
               <a onClick={toggleNav}>Work</a>
             </Link>
-          </li>
-          {/* <li>
+          </LeftItem>
+          <MiddleItem>
             <Link
               activeClass="active"
-              to="Skills"
+              to="About"
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
             >
-              <a onClick={toggleNav}>Skills</a>
+              <a onClick={toggleNav}>About</a>
             </Link>
-          </li> */}
-          <li>
+          </MiddleItem>
+
+          <RightItem>
             <Link
               activeClass="active"
               to="Contact"
@@ -104,7 +93,7 @@ export default function Navbar() {
             >
               <a onClick={toggleNav}>Contact</a>
             </Link>
-          </li>
+          </RightItem>
         </ul>
       )}
     </StyledNav>
@@ -112,43 +101,52 @@ export default function Navbar() {
 }
 
 const StyledNav = styled.nav`
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    align-items: center;
-    position: fixed;
-    background: rgba(0, 0, 0, 0.5);
-    background-blend-mode: overlay;
-    backdrop-filter: blur(15px);
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 6.25rem;
+align-items: center;
+padding: 36px 60px;
+position: fixed;
+width: 100%;
+height: 115px;
+z-index: 1000;
+top: 0;
+
+background: rgba(0, 0, 0, 0.5);
+background-blend-mode: overlay;
+backdrop-filter: blur(15px);    
+
    
   ul {
     display: flex;
     list-style: none;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 7rem;    
+    flex-direction: row;  
+    justify-content: space-between;
   }
+
+  a {
+    text-decoration: none;
+    transition: 0.7s ease;
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: rgba(0, 255, 240, 1);
+    // text-decoration: line-through;
+  }
+
   button {
     display: none;
- align-self: flex-end;
+    align-self: flex-end;
     border: none;
     background: transparent;
     color: #fff;
-  font-size: 100%;  
+    font-size: 100%;  
   }
   button:hover {
     text-decoration: line-through;
   }
+
+
   @media screen and (max-width: 500px) {
     height: auto;
-    flex-flow: row wrap;
-    gap: 2rem;
 
     ul {
       flex-flow: column;
@@ -157,28 +155,40 @@ const StyledNav = styled.nav`
       gap: 3rem;
       align-items: center;
     }
-    li:hover {
-      color: green;
-    }
     button {
       display: block;
       }
+    li {
+      text-align: center;
+    }
     }
   }
 `;
 
-// const StyledA = styled.a`
-//   @media screen and (max-width: 500px) {
-//     display: none;
-//   }
-// `;
+const LeftItem = styled.li`
+  width: 148px;
+  flex-basis: auto;
+  // font-weight: 500;
+  // font-size: 32px;
+  line-height: 134.52%;
+  /* identical to box height, or 43px */
 
-// const StyledLogo = styled(Image)`
-//   display: none;
-//   @media screen and (max-width: 500px) {
-//     display: block;
-//   }
-// `;
+  // letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  text-align: left;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+`;
+
+const MiddleItem = styled(LeftItem)`
+  text-align: center;
+`;
+
+const RightItem = styled(LeftItem)`
+  text-align: right;
+`;
 
 const HamburgerMenue = styled(Image)``;
 const CloseMenue = styled(Image)``;

@@ -4,28 +4,36 @@ export default function Hero() {
   return (
     <StyledHero>
       <span>
-        <h1> Dani Opri</h1>
+        <h1>
+          {" "}
+          Dani <br /> Opri
+        </h1>
         <div></div>
       </span>
       <span>
-        <p> Front-end Developer and UX Designer</p>
+        <p>Developer & Designer</p>
         <div></div>
       </span>
     </StyledHero>
   );
 }
 
-const StyledHero = styled.section`
+const StyledHero = styled.header`
   display: flex;
   flex-flow: column nowrap;
+  gap: 55px;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
 
   h1 {
-    font-style: italic;
-    font-size: 9rem;
+    font-weight: 500;
+    font-size: 108px;
+    line-height: 98px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 
     animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal forwards running
       header;
@@ -61,7 +69,14 @@ const StyledHero = styled.section`
   }
 
   p {
-    font-size: 3.125rem;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 90.5%;
+    /* or 16px */
+
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 
     animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal forwards running
       subtitle;

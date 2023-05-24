@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 :root {
-  font-family: Satoshi, sans-serif;
+  font-family: 'Satoshi', sans-serif;
   font-size: 1rem;
 }
 
@@ -30,21 +30,6 @@ body {
 
 
 
-
-a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.7s ease;
-  cursor: pointer;
-  font-weight: 500;
-font-size: 22px;
-line-height: 27px;
-}
-
-a:hover {
-  // text-decoration: line-through;
-  color: #80CFF9;
-}
 
 .hidden {
   opacity: 0;
