@@ -1,176 +1,128 @@
-import Image from "next/image";
-
 import styled from "styled-components";
-import {
-  StyledTitle,
-  StyledSubtitle,
-  StyledCaption,
-  StyledSubHeading,
-} from "./Fonts";
+import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
-const Project = ({ title, stack, description, alt, image, link }) => {
+export default function Project({ title, stack, description, image }) {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0,
+    rootMargin: "0px 0px -50% 0px",
+  });
+
+  const containerClassName = `hidden ${inView ? "show" : ""}`;
+
   return (
-    <ProjectSlide>
-      <ProjectContainer>
-        <TextContainer>
-          <NumberContainer>
-            <StyledSubHeading>01</StyledSubHeading>
-          </NumberContainer>
-          <StyledTextContainer>
-            <Title>
-              <StyledTitle> {title}</StyledTitle>
-            </Title>
-
-            <SubTextContainer>
-              <StyledSubtitle>{stack}</StyledSubtitle>
-
-              <StyledCaption>{description}</StyledCaption>
-            </SubTextContainer>
-          </StyledTextContainer>
-        </TextContainer>
-
-        <ImageContainer>
-          <FirstImage height={644} width={316} alt={alt} src={image} />
-          <SecondImage height={579} width={284} alt={alt} src={image} />
-        </ImageContainer>
-      </ProjectContainer>
-    </ProjectSlide>
+    <ProjectContainer ref={ref} className={containerClassName}>
+      <TextContainer>
+        <h1>{title}</h1>
+        <div>
+          <ul>
+            {stack.map((tag, index) => {
+              return (
+                <li key={index}>
+                  <p>
+                    {index > 0 ? ` * ` : ""} {tag}
+                  </p>
+                </li>
+              );
+            })}
+          </ul>
+          <p>{description} </p>
+        </div>
+      </TextContainer>
+      <ImageContainer>
+        {image.map((source, index) => {
+          return (
+            <StyledImage
+              key={index}
+              height={323}
+              width={350}
+              alt={source.alt}
+              src={source.img}
+            />
+          );
+        })}
+      </ImageContainer>
+    </ProjectContainer>
   );
-};
+}
 
-export default Project;
-
-const ProjectSlide = styled.article`
-  position: relative;
-  width: 1440px;
-  height: 815px;
-`;
-
-const ProjectContainer = styled.div`
+const ProjectContainer = styled.article`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  padding: 0px;
-  gap: 65px;
+  gap: 2rem;
 
-  position: absolute;
-  width: 1440px;
-  height: 815px;
-  left: 71px;
-  top: 44px;
+  @media screen and (min-width: 834px) {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 `;
 
 const TextContainer = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 1px;
 
-  position: absolute;
-  width: 621px;
-  height: 738px;
-  left: 34px;
-  top: 35px;
-`;
+  gap: 1.75rem;
 
-const NumberContainer = styled.div`
-  width: 36px;
-  height: 40px;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 0.75rem;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 1.563rem;
+    line-height: 26px;
+    letter-spacing: -0.035em;
+  }
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.045em;
+  }
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    padding: 0.5rem 0 1rem 0;
+  }
+  li {
+    color: rgba(155, 155, 155, 1);
+  }
 
-  /* Number */
+  @media screen and (min-width: 834px) {
+    width: 31.563rem;
+    height: 34.375rem;
 
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 134.52%;
-  /* or 40px */
+    h1 {
+      font-weight: 500;
+      font-size: 4.688rem;
+      line-height: 91px;
+      letter-spacing: 0.005em;
+      text-align: left;
+    }
 
-  letter-spacing: 0.01em;
-
-  color: #000000;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-`;
-
-const StyledTextContainer = styled.div`
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0px 36px;
-  gap: 45px;
-
-  width: 621px;
-  height: 268px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-`;
-
-const Title = styled.div`
-  width: 307px;
-  height: 91px;
-
-  /* Title */
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 75px;
-  line-height: 91px;
-  /* identical to box height */
-
-  letter-spacing: 0.005em;
-
-  color: #000000;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-`;
-const SubTextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 20px;
-
-  width: 584px;
-  height: 132px;
+    p {
+      font-size: 1.75rem;
+      line-height: 38px;
+      letter-spacing: 0.01em;
+      text-align: left;
+    }
+  }
 `;
 
 const ImageContainer = styled.figure`
-  position: absolute;
-  width: 676px;
-  height: 729px;
-  left: 720px;
-  top: 44px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.875rem;
+  align-items: center;
 `;
-
-const FirstImage = styled(Image)`
-  position: absolute;
-
-  left: 0px;
-  top: 0px;
-`;
-
-const SecondImage = styled(Image)`
-  position: absolute;
-
-  left: 392px;
-  top: 150px;
+const StyledImage = styled(Image)`
+  @media screen and (min-width: 834px) {
+    width: 37.75rem;
+    height: 34.375rem;
 `;

@@ -1,6 +1,7 @@
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
+import Image from "next/image";
 
 export default function Navbar() {
   const [toggleMenue, setToggleMenue] = useState(false);
@@ -24,24 +25,85 @@ export default function Navbar() {
     };
   }, []);
 
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <StyledNav>
-      <StyledLink href="/">
-        <h1>Dev</h1>
-      </StyledLink>
+      <a onClick={goToTop}>
+        <Image height={45} width={24} alt="Logo" src="Logo.svg" />
+      </a>
+      {/* <StyledLogo height={45} width={24} alt="Logo" src="Logo.svg" /> */}
       <button type="button" onClick={toggleNav}>
-        X
+        {!toggleMenue ? (
+          <HamburgerMenue
+            height={24}
+            width={24}
+            alt="Menue"
+            src="/HamburgerMenue.svg"
+          />
+        ) : (
+          <CloseMenue
+            height={24}
+            width={24}
+            alt="Menue"
+            src="/CloseMenue.svg"
+          />
+        )}
       </button>
       {(toggleMenue || width > 500) && (
         <ul>
           <li>
-            <Link href="/">Work</Link>
+            <Link
+              activeClass="active"
+              to="About"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <a onClick={toggleNav}>About</a>
+            </Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link
+              activeClass="active"
+              to="Work"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <a onClick={toggleNav}>Work</a>
+            </Link>
           </li>
+          {/* <li>
+            <Link
+              activeClass="active"
+              to="Skills"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <a onClick={toggleNav}>Skills</a>
+            </Link>
+          </li> */}
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link
+              activeClass="active"
+              to="Contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <a onClick={toggleNav}>Contact</a>
+            </Link>
           </li>
         </ul>
       )}
@@ -57,22 +119,24 @@ const StyledNav = styled.nav`
     padding: 1rem 2rem;
     align-items: center;
     position: fixed;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    backdrop-filter: blur(15px);
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 1000;
+    height: 6.25rem;
+   
   ul {
     display: flex;
-    gap: 4rem;
     list-style: none;
-    cursor: pointer;
-    
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 7rem;    
   }
   button {
     display: none;
  align-self: flex-end;
-   
     border: none;
     background: transparent;
     color: #fff;
@@ -83,11 +147,12 @@ const StyledNav = styled.nav`
   }
   @media screen and (max-width: 500px) {
     height: auto;
-    flex-flow: column;
+    flex-flow: row wrap;
     gap: 2rem;
 
     ul {
       flex-flow: column;
+      width: 100%;
       padding-block: 2rem;
       gap: 3rem;
       align-items: center;
@@ -97,14 +162,23 @@ const StyledNav = styled.nav`
     }
     button {
       display: block;
-     
       }
     }
   }
 `;
 
-const StyledLink = styled(Link)`
-  @media screen and (max-width: 500px) {
-    display: none;
-  }
-`;
+// const StyledA = styled.a`
+//   @media screen and (max-width: 500px) {
+//     display: none;
+//   }
+// `;
+
+// const StyledLogo = styled(Image)`
+//   display: none;
+//   @media screen and (max-width: 500px) {
+//     display: block;
+//   }
+// `;
+
+const HamburgerMenue = styled(Image)``;
+const CloseMenue = styled(Image)``;

@@ -1,50 +1,93 @@
 import styled from "styled-components";
 
-const Container = styled.header`
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // text-align: center;
-  // position: center;
-  // padding: 18rem 15rem;
-  // gap: 19px;
-  // position: relative;
+export default function Hero() {
+  return (
+    <StyledHero>
+      <span>
+        <h1> Dani Opri</h1>
+        <div></div>
+      </span>
+      <span>
+        <p> Front-end Developer and UX Designer</p>
+        <div></div>
+      </span>
+    </StyledHero>
+  );
+}
 
-  display: grid;
-  place-items: center;
+const StyledHero = styled.section`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
+
   h1 {
-    font-size: clamp(3rem, 10vw, 5rem);
-    letter-spacing: -4px;
-    line-height: 1.2em;
     font-style: italic;
-    font-weight: 600;
-    line-height: 8rem;
+    font-size: 9rem;
+
+    animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal forwards running
+      header;
+    transform: translateY(210px);
   }
+  @keyframes header {
+    0% {
+      transform: translateY(150px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  div {
+    position: absolute;
+    background-color: black;
+    margin-right: 100%;
+    width: 120%;
+    height: 35vh;
+    animation: 0.5s linear 2s 1 normal forwards running div;
+  }
+
+  @keyframes div {
+    0% {
+      opacity: 1;
+      height: 35vh;
+    }
+    100% {
+      opacity: 0;
+      height: 0vh;
+    }
+  }
+
   p {
-    font-size: clamp(1rem, 5vw, 2rem);
-    font-weight: 500;
-    line-height: 58px;
+    font-size: 3.125rem;
+
+    animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal forwards running
+      subtitle;
+    transform: translateY(70px);
   }
-  @media screen and (max-width: 500px) {
-    padding: 5rem 4rem;
+  @keyframes subtitle {
+    0% {
+      transform: translateY(110px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    height: 70vh;
+    margin-bottom: 2rem;
+    text-align: center;
 
     h1 {
-      font-weight: 500;
-      line-height: 3rem;
+      font-size: 4rem;
     }
+
     p {
-      font-weight: 400;
+      font-size: 1rem;
+      line-height: 5rem;
     }
   }
 `;
-
-export default function Hero() {
-  return (
-    <Container>
-      <h1> Dani Opri</h1>
-      <p> Front-end Developer and UX Designer</p>
-    </Container>
-  );
-}

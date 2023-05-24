@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
 
 :root {
   font-family: Satoshi, sans-serif;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 html,
@@ -20,22 +20,43 @@ body {
   background-color: rgb(0, 0, 0);
   height: 100%;
   color: #fff;
-  
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
+ }
+
+
+
 
 a {
   color: #fff;
   text-decoration: none;
+  transition: 0.7s ease;
+  cursor: pointer;
+  font-weight: 500;
+font-size: 22px;
+line-height: 27px;
 }
 
 a:hover {
-  text-decoration: line-through;
+  // text-decoration: line-through;
+  color: #80CFF9;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
 }
 
 `;
