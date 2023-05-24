@@ -20,7 +20,12 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
   gap: 18.5rem;
+
   @media screen and (max-width: 834px) {
     margin: 1rem;
+  }
+
+  @media screen and (min-width: 834px) {
+    margin: 100px;
   }
 `;

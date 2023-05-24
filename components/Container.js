@@ -22,11 +22,11 @@ export default function HiddenElement({ children, title, id }) {
 }
 
 const StyledContainer = styled.section`
-  gap: 3.8rem;
+  // gap: 3.8rem;
   scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-start;
 
   span {
     transition-delay: 200ms;
@@ -38,22 +38,17 @@ const StyledContainer = styled.section`
 
   @media screen and (min-width: 1200px) {
     min-height: 125vh;
-    width: 83.813rem;
+    // width: 83.813rem;
 
     div {
-      text-align: right;
-      padding: 0 6.25rem;
-      align-self: flex-end;
+      // text-align: right;
+      // padding: 0 6.25rem;
+      // align-self: flex-end;
     }
     p {
       font-size: 36px;
       line-height: 50px;
       letter-spacing: -0.005em;
-    }
-    span {
-      transition: transform 0.5s ease-out 0s;
-      opacity: 30%;
-      color: grey;
     }
   }
 `;

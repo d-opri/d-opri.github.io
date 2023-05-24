@@ -4,6 +4,7 @@ import About from "../../components/About";
 import Skills from "../../components/Skills";
 import Contact from "../../components/Contact";
 import Work from "../../components/Work";
+import Projects from "../../components/Projects";
 
 export default function Home() {
   return (
@@ -12,10 +13,11 @@ export default function Home() {
         <title>Dani Opri</title>
       </Head>
       <Hero />
-      <About />
+      <Projects />
+      {/* <About />
       <Skills />
       <Work />
-      <Contact />
+      <Contact /> */}
     </>
   );
 }
