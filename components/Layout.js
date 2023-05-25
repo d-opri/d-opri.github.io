@@ -1,10 +1,14 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import styled from "styled-components";
+import Head from "next/head";
 
 export default function Layout({ children }) {
   return (
     <PageContainer>
+      <Head>
+        <title>Dani Opri</title>
+      </Head>
       <Navbar />
       <Main>{children}</Main>
       <Footer />

@@ -4,10 +4,8 @@ export default function Hero() {
   return (
     <StyledHero>
       <span>
-        <h1>
-          {" "}
-          Dani <br /> Opri
-        </h1>
+        <Title> Dani</Title>
+        <SlightlyDifferenTitle>Opri</SlightlyDifferenTitle>
         <div></div>
       </span>
       <span>
@@ -27,26 +25,26 @@ const StyledHero = styled.header`
   height: 100vh;
   width: 100%;
 
-  h1 {
-    font-weight: 500;
-    font-size: 108px;
-    line-height: 98px;
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+  // h1 {
+  //   font-weight: 500;
+  //   font-size: 108px;
+  //   line-height: 98px;
+  //   text-align: center;
+  //   letter-spacing: 0.04em;
+  //   text-transform: uppercase;
 
-    animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal forwards running
-      header;
-    transform: translateY(210px);
-  }
-  @keyframes header {
-    0% {
-      transform: translateY(150px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
+  //   animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal forwards running
+  //     header;
+  //   transform: translateY(210px);
+  // }
+  // @keyframes header {
+  //   0% {
+  //     transform: translateY(150px);
+  //   }
+  //   100% {
+  //     transform: translateY(0px);
+  //   }
+  // }
 
   div {
     position: absolute;
@@ -74,8 +72,8 @@ const StyledHero = styled.header`
     line-height: 90.5%;
     /* or 16px */
 
-    text-align: center;
-    letter-spacing: 0.04em;
+    text-align: right;
+    letter-spacing: 0.036em;
     text-transform: uppercase;
 
     animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal forwards running
@@ -92,12 +90,10 @@ const StyledHero = styled.header`
   }
 
   @media screen and (max-width: 390px) {
-    height: 70vh;
-    margin-bottom: 2rem;
     text-align: center;
 
     h1 {
-      font-size: 4rem;
+      font-size: 5.5rem;
     }
 
     p {
@@ -105,4 +101,31 @@ const StyledHero = styled.header`
       line-height: 5rem;
     }
   }
+`;
+
+const Title = styled.h1`
+    font-weight: 500;
+    font-size: 108px;
+    line-height: 98px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+   
+
+    animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal forwards running
+      header;
+    transform: translateY(210px);
+  }
+  @keyframes header {
+    0% {
+      transform: translateY(150px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+`;
+
+const SlightlyDifferenTitle = styled(Title)`
+  letter-spacing: 0.04em;
 `;

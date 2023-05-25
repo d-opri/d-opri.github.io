@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 
 export default function Project({ title, stack, image }) {
@@ -25,7 +26,9 @@ export default function Project({ title, stack, image }) {
         );
       })}
       <header>
-        <h3>{title}</h3>
+        <StyledLink href="/splitme">
+          <h3>{title}</h3>
+        </StyledLink>
         <ul>
           {stack.map((tag, index) => {
             return (
@@ -88,4 +91,13 @@ const StyledImage = styled(Image)`
   border-radius: 25px;
   width: 100%;
   height: 100%;
+`;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #fff;
+  h3 {
+    font-size: 22px;
+    line-height: 134.52%;
+    /* identical to box height, or 30px */
+  }
 `;
