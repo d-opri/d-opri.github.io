@@ -50,9 +50,6 @@ const ProjectContainer = styled.article`
   flex-flow: column;
   gap: 20px;
 
-  :hover {
-    opacity: 50%;
-  }
   h3 {
     font-size: 22px;
     line-height: 134.52%;
@@ -63,6 +60,10 @@ const ProjectContainer = styled.article`
     display: flex;
     flex-flow: row wrap;
     list-style: none;
+  }
+
+  a {
+    text-decoration: none !important;
   }
 
   header {
@@ -91,10 +92,13 @@ const StyledImage = styled(Image)`
   border-radius: 25px;
   width: 100%;
   height: 100%;
+
+  :hover {
+    opacity: 50%;
+  }
 `;
 const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: #fff;
+  width: min-content;
   h3 {
     font-size: 22px;
     line-height: 134.52%;

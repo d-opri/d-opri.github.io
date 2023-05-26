@@ -125,7 +125,8 @@ backdrop-filter: blur(15px);
 
   button {
     display: none;
-    align-self: flex-end;
+  position: relative;
+  left: 17rem;
     border: none;
     background: transparent;
     color: #fff;
@@ -138,7 +139,7 @@ backdrop-filter: blur(15px);
 
   @media screen and (max-width: 500px) {
     height: auto;
-
+justify-content: flex-end;
     ul {
       flex-flow: column;
       width: 100%;

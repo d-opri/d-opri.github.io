@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import Header from "../../components/Header";
-import Image from "next/image";
 import TextImageContainer from "../../components/TextImageContainer";
 import Link from "next/link";
 

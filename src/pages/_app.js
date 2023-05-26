@@ -64,7 +64,6 @@ a:hover::before,
   }
 
 
-
 .hidden {
   opacity: 0;
   filter: blur(5px);
