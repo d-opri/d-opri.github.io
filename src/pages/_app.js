@@ -29,6 +29,40 @@ body {
  }
 
 
+ a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+
+a::before,
+a::after {
+  content: "";
+  position: absolute;
+  left: -6px; /* Adjust the value to extend the line */
+  right: -6px; /* Adjust the value to extend the line */
+  height: 1px;
+  background-color: #fff;
+      transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+a::before {
+  top: 50%;
+  transform-origin: right;
+}
+
+a::after {
+  bottom: 50%;
+  transform-origin: left;
+}
+
+a:hover::before,
+  a:hover::after {
+    transform: scaleX(1);
+  }
+
 
 
 .hidden {

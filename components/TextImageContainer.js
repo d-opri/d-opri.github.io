@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import Image from "next/image";
 import Header from "./Header";
+import LinkSection from "./LinkSection";
 
 export default function TextImageContainer() {
   return (
@@ -49,19 +50,15 @@ export default function TextImageContainer() {
           alt="mockup"
         />
       </ImageContainer>
-      <TextSection>
-        <header>Giving adlfkj sdnvl afcm;ljgg ent ash vskbcjh grgsds</header>
+      <TextContainer>
+        <h4>Giving adlfkj sdnvl afcm;ljgg ent ash vskbcjh grgsds</h4>
         <p>
           fraction Our taefabckjeskzrn vanc.js was Refraction Our task was
           egfaiwluehcjeka/l Refraction Our task was Rd.wnekacn scezkdh ;lbhask
           was Refraction Our task
         </p>
-      </TextSection>
-      <BannerSection>
-        Refraction Our task was Our task wasOur task wasOur task wasOur task was
-        Our task wasOur task wasOur task wasOurask was Our task wasOur task
-        wasOur task was
-      </BannerSection>
+      </TextContainer>
+      <LinkSection />
     </Layout>
   );
 }
@@ -69,25 +66,25 @@ export default function TextImageContainer() {
 const Layout = styled.section`
   display: flex;
   flex-flow: column nowrap;
-  gap: 40px;
+  gap: 8.75rem;
+  margin-top: 5rem;
 
   @media screen and (max-width: 834px) {
-    gap: 30px;
-    margin: 1rem;
+    gap: 60px;
+    margin: 11rem 0.5rem 0;
   }
 `;
 
 const Container = styled.section`
   display: flex;
   flex-flow: row wrap;
-  gap: 3.75rem;
+  gap: 80px;
   justify-content: space-between;
   align-items: flex-start;
   height: min-content;
-  outline: dashed white;
 
   @media screen and (max-width: 390px) {
-    gap: 18px;
+    gap: 2rem;
   }
 `;
 
@@ -98,6 +95,11 @@ const TextContainer = styled.header`
   align-items: flex-start;
   gap: 2.313rem;
   flex: 1 0 0;
+
+  white-space: pre-wrap;
+  width: 100%;
+  word-break: break-word;
+  word-wrap: break-word;
 
   h4 {
     font-weight: 400;
@@ -110,7 +112,19 @@ const TextContainer = styled.header`
     font-size: 1.625rem;
     line-height: 150%;
     opacity: 0.7;
+    font-weight: 300;
     letter-spacing: 0.065em;
+    font-weight: 300;
+  }
+
+  @media screen and (max-width: 390px) {
+    h4 {
+      font-size: 32px;
+      letter-spacing: -1px;
+      text-transform: none;
+      text-decoration: none;
+      line-height: 1.4em;
+    }
   }
 `;
 
@@ -131,61 +145,60 @@ const ImageContainer = styled.div`
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  outline: dashed white;
-  gap: 20px;
+  gap: 40px;
 `;
 
-const TextSection = styled.section`
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 36px;
+// const TextSection = styled.section`
+//   display: flex;
+//   flex-flow: row wrap;
+//   align-items: flex-start;
+//   justify-content: space-between;
+//   gap: 36px;
 
-  @media screen and (min-width: 538px) {
-    gap: 89px;
-    padding: 100px 100px 60px;
-  }
+//   @media screen and (min-width: 538px) {
+//     gap: 89px;
+//     padding: 100px 100px 60px;
+//   }
 
-  header {
-    font-size: 32px;
-    line-height: 33px;
-    letter-spacing: 0.005em;
-    flex: 1 0 0;
-  }
+//   header {
+//     font-size: 32px;
+//     line-height: 33px;
+//     letter-spacing: 0.005em;
+//     flex: 1 0 0;
+//   }
 
-  p {
-    font-size: 20px;
-    line-height: 166%;
-    /* or 33px */
+//   p {
+//     font-size: 20px;
+//     line-height: 166%;
+//     /* or 33px */
 
-    letter-spacing: 0.065em;
-    flex-basis: 37.375rem;
-  }
-`;
+//     letter-spacing: 0.065em;
+//     flex-basis: 37.375rem;
+//   }
+// `;
 
-const BannerSection = styled.section`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  background: #323232;
+// const BannerSection = styled.section`
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 0px;
+//   background: #323232;
 
-  width: 100%;
-  height: 603px;
-  //   margin: 0 !important;
+//   width: 100%;
+//   height: 603px;
+//   //   margin: 0 !important;
 
-  p {
-    font-size: 26px;
-    line-height: 150%;
-    /* or 39px */
+//   p {
+//     font-size: 26px;
+//     line-height: 150%;
+//     /* or 39px */
 
-    letter-spacing: 0.065em;
-  }
+//     letter-spacing: 0.065em;
+//   }
 
-  @media screen and (max-width: 390px) {
-    width: 100%;
-    height: 200px;
-  }
-`;
+//   @media screen and (max-width: 390px) {
+//     width: 100%;
+//     height: 200px;
+//   }
+// `;

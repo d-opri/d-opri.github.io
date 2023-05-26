@@ -22,7 +22,7 @@ const StyledHero = styled.header`
   gap: 55px;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 70vh;
   width: 100%;
 
   // h1 {

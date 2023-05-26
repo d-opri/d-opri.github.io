@@ -19,11 +19,11 @@ export default function Layout({ children }) {
 const PageContainer = styled.div``;
 
 const Main = styled.main`
-  padding-bottom: 6rem;
+  // padding-bottom: 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18.5rem;
+  gap: 10rem;
 
   @media screen and (max-width: 834px) {
     margin: 1rem;

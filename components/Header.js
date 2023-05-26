@@ -8,11 +8,11 @@ export default function Header() {
       </Title>
       <Body>
         <TechStack>
-          <li>Tag</li>
+          <li>Figma</li>
           <li>*</li>
-          <li>Tag</li>
+          <li>React</li>
           <li>*</li>
-          <li>Tag</li>
+          <li>MongoDB</li>
         </TechStack>
         <Description>
           <p>
@@ -32,22 +32,22 @@ const Container = styled.section`
   display: flex;
   flex-flow: row wrap;
   height: min-content;
-  margin-top: 7rem;
-  outline: dashed white;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 const Title = styled.header`
   flex: 1 0 0;
-  outline: dashed white;
+
   h1 {
     font-size: 7.188rem;
     letter-spacing: -0.25rem;
     line-height: 1.2em;
+    font-weight: 400;
   }
 
   @media screen and (max-width: 390px) {
-    margin-bottom: 60px;
+    margin-bottom: 4.25rem;
+
     h1 {
       font-size: 60px;
       font-weight: 400;
@@ -65,10 +65,6 @@ const Body = styled.article`
   gap: 1.375rem;
   flex-basis: 37.375rem;
   opacity: 0.8;
-
-  @media screen and (max-width: 390px) {
-    gap: 0.5rem;
-  }
 `;
 
 const TechStack = styled.ul`
@@ -79,7 +75,7 @@ const TechStack = styled.ul`
   width: 100%;
 
   li {
-    font-size: 1.375rem;
+    font-size: 1.625rem;
     letter-spacing: -0.019rem;
     line-height: 1.4em;
     color: #b2b2b2;
@@ -100,13 +96,13 @@ const Description = styled.div`
     font-size: 1.625rem;
     letter-spacing: -0.031rem;
     line-height: 1.6em;
-    color: #ffffff;
+    font-weight: 300;
   }
 
   @media screen and (max-width: 390px) {
     p {
       font-size: 20px;
-
+      font-weight: 300;
       letter-spacing: -0.3px;
       line-height: 1.6em;
       paragraph-spacing: 0px;

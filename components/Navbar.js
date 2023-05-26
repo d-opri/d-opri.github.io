@@ -121,16 +121,7 @@ backdrop-filter: blur(15px);
     justify-content: space-between;
   }
 
-  a {
-    text-decoration: none;
-    transition: 0.7s ease;
-    cursor: pointer;
-  }
-
-  a:hover {
-    color: rgba(0, 255, 240, 1);
-    // text-decoration: line-through;
-  }
+  
 
   button {
     display: none;
