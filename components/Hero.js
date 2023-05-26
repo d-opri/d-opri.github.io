@@ -22,7 +22,7 @@ const StyledHero = styled.header`
   gap: 55px;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 100vh;
   width: 100%;
 
   // h1 {
@@ -111,7 +111,6 @@ const Title = styled.h1`
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
-   
 
     animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal forwards running
       header;

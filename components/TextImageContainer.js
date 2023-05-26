@@ -67,7 +67,6 @@ const Layout = styled.section`
   display: flex;
   flex-flow: column nowrap;
   gap: 8.75rem;
-  margin-top: 5rem;
 
   @media screen and (max-width: 834px) {
     gap: 60px;
@@ -147,58 +146,3 @@ const ImageContainer = styled.div`
   justify-content: flex-start;
   gap: 40px;
 `;
-
-// const TextSection = styled.section`
-//   display: flex;
-//   flex-flow: row wrap;
-//   align-items: flex-start;
-//   justify-content: space-between;
-//   gap: 36px;
-
-//   @media screen and (min-width: 538px) {
-//     gap: 89px;
-//     padding: 100px 100px 60px;
-//   }
-
-//   header {
-//     font-size: 32px;
-//     line-height: 33px;
-//     letter-spacing: 0.005em;
-//     flex: 1 0 0;
-//   }
-
-//   p {
-//     font-size: 20px;
-//     line-height: 166%;
-//     /* or 33px */
-
-//     letter-spacing: 0.065em;
-//     flex-basis: 37.375rem;
-//   }
-// `;
-
-// const BannerSection = styled.section`
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   align-items: center;
-//   padding: 0px;
-//   background: #323232;
-
-//   width: 100%;
-//   height: 603px;
-//   //   margin: 0 !important;
-
-//   p {
-//     font-size: 26px;
-//     line-height: 150%;
-//     /* or 39px */
-
-//     letter-spacing: 0.065em;
-//   }
-
-//   @media screen and (max-width: 390px) {
-//     width: 100%;
-//     height: 200px;
-//   }
-// `;

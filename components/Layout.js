@@ -23,7 +23,7 @@ const Main = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10rem;
+  gap: 5rem;
 
   @media screen and (max-width: 834px) {
     margin: 1rem;
