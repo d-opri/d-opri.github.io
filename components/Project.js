@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 
-export default function Project({ title, stack, image }) {
+export default function Project({ title, stack, image, link }) {
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0,
@@ -26,19 +26,20 @@ export default function Project({ title, stack, image }) {
         );
       })}
       <header>
-        <StyledLink href="/splitme">
+        <StyledLink href={link}>
           <h3>{title}</h3>
         </StyledLink>
         <ul>
-          {stack.map((tag, index) => {
-            return (
+          {stack.map((tag, index, arr) =>
+            index === arr.length - 1 ? (
+              <li key={index}>{tag}</li>
+            ) : (
               <li key={index}>
-                <p>
-                  {index > 0 ? ` * ` : ""} {tag}
-                </p>
+                {tag}
+                &nbsp; • &nbsp;
               </li>
-            );
-          })}
+            )
+          )}
         </ul>
       </header>
     </ProjectContainer>
@@ -50,20 +51,10 @@ const ProjectContainer = styled.article`
   flex-flow: column;
   gap: 20px;
 
-  h3 {
-    font-size: 22px;
-    line-height: 134.52%;
-    /* identical to box height, or 30px */
-  }
-
   ul {
     display: flex;
     flex-flow: row wrap;
     list-style: none;
-  }
-
-  a {
-    text-decoration: none !important;
   }
 
   header {
@@ -74,8 +65,8 @@ const ProjectContainer = styled.article`
 
   li {
     font-size: 18px;
-    line-height: 134.52%;
-    color: rgba(155, 155, 155, 1);
+    line-height: 1.4em;
+    opacity: 0.7;
   }
 
   @media screen and (max-width: 834px) {
@@ -98,10 +89,9 @@ const StyledImage = styled(Image)`
   }
 `;
 const StyledLink = styled(Link)`
-  width: min-content;
   h3 {
     font-size: 22px;
-    line-height: 134.52%;
-    /* identical to box height, or 30px */
+    line-height: 1.875em;
+    font-weight: 550;
   }
 `;

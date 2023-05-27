@@ -25,15 +25,14 @@ const Section = styled.section`
   height: min-content;
   width: 100%;
   scroll-snap-align: start;
-
   display: flex;
   flex-flow: column;
   place-content: flex-start;
-
   padding: 100px 1rem;
 
   @media (min-width: 768px) {
-    padding: 0;
+    padding: 100px;
+    height: 100vh;
   }
 `;
 
@@ -45,7 +44,8 @@ const Header = styled.header`
   gap: 40px;
 
   @media (min-width: 768px) {
-    padding: 0;
+    flex-direction: row;
+    place-content: center space-between;
   }
 `;
 
@@ -55,7 +55,10 @@ const Title = styled.h2`
   line-height: 1.2em;
 
   @media (min-width: 768px) {
-    padding: 0;
+    font-weight: 500;
+    font-size: 92px;
+    line-height: 134.52%;
+    /* identical to box height, or 124px */
   }
 `;
 
@@ -63,12 +66,17 @@ const Text = styled.p`
   opacity: 0.7;
   font-size: 22px;
   line-height: 1.8em;
-
   word-break: break-word;
   overflow-wrap: break-word;
 
   @media (min-width: 768px) {
-    padding: 0;
+    flex-basis: 654px;
+
+    font-size: 32px;
+    line-height: 132.52%;
+    /* or 42px */
+    font-weight: 400;
+    letter-spacing: -0.045em;
   }
 `;
 
@@ -79,24 +87,5 @@ const Article = styled.article`
   justify-content: space-evenly;
 
   @media (min-width: 768px) {
-    padding: 0;
   }
 `;
-
-// const StyledTitle = styled.h1`
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 3.125rem;
-//   line-height: 51px;
-//   letter-spacing: 0.07em;
-//   text-transform: uppercase;
-
-//   @media screen and (min-width: 1200px) {
-//     font-weight: 500;
-//     // font-size: 4.688rem;
-//     font-size: 12.5rem;
-//     line-height: 12.875rem;
-//     letter-spacing: 0.105em;
-//     transform: translateX(50.2466%);
-//   }
-// `;

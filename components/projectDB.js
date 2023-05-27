@@ -1,54 +1,26 @@
 export const PROJECTS = [
   {
-    title: "Sofia",
-    stack: ["figma", "next js", "react", "mongoDB"],
+    title: "Split Me",
+    stack: ["Frontend Development", "UX Design", "UI Design"],
     description:
       "Here comes the description of the projehtb what . ddi and so son and so forth projehtb what . dkhwlwhdi and so son and so fo",
     image: [
       {
         img: "/mockup.svg",
-        alt: "bunny",
+        alt: "split me app",
       },
     ],
     link: "/",
   },
   {
-    title: "bunny",
-    stack: ["figma", "next js", "react", "mongoDB"],
+    title: "Pluto Pay",
+    stack: ["UX Design", "UI Design", "UX Research"],
     description:
       "Here comes the description of the projehtb what . ddi and so son and so forth projehtb what . dkhwlwhdi and so son and so fo",
     image: [
       {
         img: "/mockup.svg",
-        alt: "bunny",
-      },
-    ],
-
-    link: "/",
-  },
-  {
-    title: "bunny",
-    stack: ["figma", "next js", "react", "mongoDB"],
-    description:
-      "Here comes the description of the projehtb what . ddi and so son and so forth projehtb what . dkhwlwhdi and so son and so fo",
-    image: [
-      {
-        img: "/mockup.svg",
-        alt: "bunny",
-      },
-    ],
-
-    link: "/",
-  },
-  {
-    title: "bunny",
-    stack: ["figma", "next js", "react", "mongoDB"],
-    description:
-      "Here comes the description of the projehtb what . ddi and so son and so forth projehtb what . dkhwlwhdi and so son and so fo",
-    image: [
-      {
-        img: "/mockup.svg",
-        alt: "bunny",
+        alt: "pluto pay",
       },
     ],
 
