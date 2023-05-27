@@ -29,10 +29,8 @@ const Section = styled.section`
   display: flex;
   flex-flow: column;
   place-content: flex-start;
-  align-items: flex-start;
-  padding: 100px 1rem;
 
-  gap: 60px;
+  padding: 100px 1rem;
 
   @media (min-width: 768px) {
     padding: 0;
@@ -75,6 +73,11 @@ const Text = styled.p`
 `;
 
 const Article = styled.article`
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+
   @media (min-width: 768px) {
     padding: 0;
   }
