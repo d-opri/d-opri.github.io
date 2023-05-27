@@ -20,7 +20,7 @@ export default function Skills() {
   );
 }
 
-const List = styled.ul`
+export const List = styled.ul`
   list-style: none;
 
   display: flex;
@@ -29,7 +29,7 @@ const List = styled.ul`
   gap: 18px;
 `;
 
-const Item = styled.li`
+export const Item = styled.li`
   text-align: right;
   opacity: 0.7;
   font-size: 22px;
