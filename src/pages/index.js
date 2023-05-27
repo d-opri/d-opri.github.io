@@ -2,14 +2,14 @@ import Hero from "../../components/Hero";
 import About from "../../components/newComponents/About";
 import Skills from "../../components/newComponents/Skills";
 import Contact from "../../components/newComponents/Contact";
-
-import Projects from "../../components/Projects";
+import Work from "../../components/newComponents/Work";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Projects />
+      {/* <Projects /> */}
+      <Work />
       <About />
       <Skills />
       <Contact />
