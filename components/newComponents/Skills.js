@@ -22,11 +22,11 @@ export default function Skills() {
 
 export const List = styled.ul`
   list-style: none;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 18px;
+  gap: 1rem;
+  flex-basis: 50%;
 `;
 
 export const Item = styled.li`
@@ -34,11 +34,14 @@ export const Item = styled.li`
   opacity: 0.7;
   font-size: 22px;
   line-height: 1.8em;
-
   word-break: break-word;
   overflow-wrap: break-word;
 
   @media (min-width: 768px) {
-    padding: 0;
+    font-size: 32px;
+    line-height: 132.52%;
+    /* or 42px */
+    font-weight: 400;
+    letter-spacing: -0.045em;
   }
 `;

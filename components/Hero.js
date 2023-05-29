@@ -5,7 +5,7 @@ export default function Hero() {
     <StyledHero>
       <span>
         <Title> Dani</Title>
-        <SlightlyDifferenTitle>Opri</SlightlyDifferenTitle>
+        <TitleSecondLine>Opri</TitleSecondLine>
         <div></div>
       </span>
       <span>
@@ -24,27 +24,6 @@ const StyledHero = styled.header`
   align-items: center;
   height: 100vh;
   width: 100%;
-
-  // h1 {
-  //   font-weight: 500;
-  //   font-size: 108px;
-  //   line-height: 98px;
-  //   text-align: center;
-  //   letter-spacing: 0.04em;
-  //   text-transform: uppercase;
-
-  //   animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal forwards running
-  //     header;
-  //   transform: translateY(210px);
-  // }
-  // @keyframes header {
-  //   0% {
-  //     transform: translateY(150px);
-  //   }
-  //   100% {
-  //     transform: translateY(0px);
-  //   }
-  // }
 
   div {
     position: absolute;
@@ -125,6 +104,6 @@ const Title = styled.h1`
     }
 `;
 
-const SlightlyDifferenTitle = styled(Title)`
+const TitleSecondLine = styled(Title)`
   letter-spacing: 0.04em;
 `;

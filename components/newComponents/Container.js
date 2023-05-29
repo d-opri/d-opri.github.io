@@ -31,7 +31,7 @@ const Section = styled.section`
   padding: 100px 1rem;
 
   @media (min-width: 768px) {
-    padding: 100px 200px;
+    padding: 142px 100px;
     height: min-content;
   }
 `;
@@ -84,7 +84,7 @@ const Article = styled.article`
   display: flex;
   align-items: flex-start;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: flex-end;
 
   @media (min-width: 768px) {
   }
