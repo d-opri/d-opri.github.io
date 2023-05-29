@@ -35,7 +35,6 @@ const Container = styled.div`
   line-height: 1.4em;
   font-size: 20px;
   letter-spacing: -0.3px;
-  padding: 50px 0;
 
   @media screen and (min-width: 768px) {
     place-content: space-between;

@@ -49,7 +49,8 @@ const StyledContactForm = styled.form`
   flex-flow: column nowrap;
   text-align: left;
   opacity: 0.9;
-  padding: 2rem 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
   width: 100%;
 
   input {
