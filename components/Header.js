@@ -17,9 +17,9 @@ export default function Header() {
         <Description>
           <p>
             Description of product, what was my task. What problem did i solve
-            Description of what was my task. What problem did i solve
-            Description of product, what was my task. What problem did i solve
-            Description of product, what was my tasklem did i solve
+            Description of what was my t\k. What problem did i solve Description
+            of product, what was my task. What problem did i solve Description
+            of product, what was my tasklem did i solve
           </p>
         </Description>
       </Body>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import Image from "next/image";
-import LinkAnimation from "./newComponents/LinkAnimation";
+import LinkAnimation from "./LinkAnimation";
 
 export default function Navbar() {
   const [toggleMenue, setToggleMenue] = useState(false);

@@ -1,12 +1,12 @@
-import styled from "styled-components";
-import HiddenElement from "./Container";
-import Project from "./Project";
+import SectionElement from "./Container";
 import { PROJECTS } from "./projectDB";
+import Project from "./Project";
+import styled from "styled-components";
 
 export default function Work() {
   return (
-    <HiddenElement id="Work" title="Work">
-      <StyledList>
+    <SectionElement id="Work" title="Work">
+      <ProjectList>
         {PROJECTS.map((project, index) => {
           return (
             <li key={index}>
@@ -14,26 +14,16 @@ export default function Work() {
             </li>
           );
         })}
-      </StyledList>
-    </HiddenElement>
+      </ProjectList>
+    </SectionElement>
   );
 }
 
-// const StyledSection = styled(HiddenElement)`
-//   && @media screen and (min-width: 834px) {
-//     flex-direction: row wrap;
-//     align-items: flex-start;
-//     gap: 32px;
-
-//     li {
-//       margin-bottom: 56px;
-//     }
-//   }
-// `;
-
-const StyledList = styled.ul`
+const ProjectList = styled.ul`
   list-style: none;
   display: flex;
-  flex-flow: column nowrap;
-  gap: 4.688rem;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
 `;

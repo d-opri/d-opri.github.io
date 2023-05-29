@@ -1,13 +1,11 @@
-import styled from "styled-components";
-import HiddenElement from "./Container";
+import SectionElement from "./Container";
 
 export default function About() {
   return (
-    <HiddenElement id="About" title="About">
-      <p>
-        Front-end developer who cares deeply about User Experience. Serious
-        passion for UI design and new technologies.
-      </p>
-    </HiddenElement>
+    <SectionElement
+      id="About"
+      title="About"
+      text="Moin moin, Dani here. I found my way to programming through UX Design, and while i enjoy both, I find programming more fun. Being able to build with just my fingers and a keyboard can be something so personal."
+    />
   );
 }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import LinkAnimation from "./newComponents/LinkAnimation";
+import LinkAnimation from "./LinkAnimation";
 
 export default function LinkSection() {
   return (
