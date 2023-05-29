@@ -1,8 +1,7 @@
 import styled from "styled-components";
-
 import Image from "next/image";
 import Header from "./Header";
-import LinkSection from "./LinkSection";
+import LinkSection from "./Links";
 
 export default function TextImageContainer() {
   return (
@@ -66,24 +65,25 @@ export default function TextImageContainer() {
 const Layout = styled.section`
   display: flex;
   flex-flow: column nowrap;
-  gap: 8.75rem;
+  margin: 1rem;
+  gap: 60px;
 
-  @media screen and (max-width: 834px) {
-    gap: 60px;
-    margin: 11rem 0.5rem 0;
+  @media (min-width: 768px) {
+    padding: 100px;
+    gap: 8.75rem;
   }
 `;
 
 const Container = styled.section`
   display: flex;
   flex-flow: row wrap;
-  gap: 80px;
   justify-content: space-between;
   align-items: flex-start;
   height: min-content;
+  gap: 2rem;
 
-  @media screen and (max-width: 390px) {
-    gap: 2rem;
+  @media (min-width: 768px) {
+    gap: 80px;
   }
 `;
 

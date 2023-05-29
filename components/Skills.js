@@ -1,56 +1,47 @@
 import styled from "styled-components";
-import HiddenElement from "./Container";
+import SectionElement from "./Container";
 
 export default function Skills() {
   return (
-    <HiddenElement id="Skills" title="Skills">
-      <ListContainer>
-        <ListGroup>
-          <li>
-            <p>UX Research</p>
-          </li>
-          <li>
-            <p>HTML & CSS</p>
-          </li>
-          <li>
-            <p>UX Design</p>
-          </li>
-        </ListGroup>
-        <ListGroup>
-          <li>
-            <p>React</p>
-          </li>
-          <li>
-            <p>Figma</p>
-          </li>
-          <li>
-            <p>Node JS</p>
-          </li>
-        </ListGroup>
-      </ListContainer>
-    </HiddenElement>
+    <SectionElement id="Skills" title="Skills">
+      <List>
+        <Item>React</Item>
+        <Item>Next JS</Item>
+        <Item>Node JS</Item>
+        <Item>MongoDB</Item>
+      </List>
+      <List>
+        <Item>Figma</Item>
+        <Item>HTML & CSS</Item>
+        <Item>UX Design</Item>
+        <Item>UX Research</Item>
+      </List>
+    </SectionElement>
   );
 }
 
-const ListContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  gap: 76px;
-  p {
-    font-size: 21px;
-    line-height: 160%;
-    letter-spacing: -0.035em;
-  }
-`;
-
-const ListGroup = styled.ul`
+export const List = styled.ul`
+  list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 30px;
-  list-style: none;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-basis: 50%;
+`;
+
+export const Item = styled.li`
+  text-align: right;
+  opacity: 0.7;
+  font-size: 22px;
+  line-height: 1.8em;
+  word-break: break-word;
+  overflow-wrap: break-word;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+    line-height: 132.52%;
+    /* or 42px */
+    font-weight: 400;
+    letter-spacing: -0.045em;
+  }
 `;

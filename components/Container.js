@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
 
-export default function HiddenElement({ children, title, id }) {
+export default function SectionElement({ children, title, id, text }) {
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0,
@@ -12,61 +12,80 @@ export default function HiddenElement({ children, title, id }) {
   const containerClassName = `hidden ${inView ? "show" : ""}`;
 
   return (
-    <StyledContainer ref={ref} id={id} className={containerClassName}>
-      <span>
-        <StyledTitle>{title}</StyledTitle>{" "}
-      </span>
-      <div>{children}</div>
-    </StyledContainer>
+    <Section ref={ref} id={id} className={containerClassName}>
+      <Header>
+        <Title>{title}</Title> <Text>{text}</Text>
+      </Header>
+      <Article>{children}</Article>
+    </Section>
   );
 }
 
-const StyledContainer = styled.section`
-  // gap: 3.8rem;
+const Section = styled.section`
+  height: min-content;
+  width: 100%;
   scroll-snap-align: start;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: flex-start;
+  display: flex;
+  flex-flow: column;
+  place-content: flex-start;
+  padding: 100px 1rem;
 
-  span {
-    transition-delay: 200ms;
-  }
-  div {
-    transition-delay: 500ms;
-    z-index: 9;
-  }
-
-  @media screen and (min-width: 1200px) {
-    min-height: 125vh;
-    // width: 83.813rem;
-
-    div {
-      // text-align: right;
-      // padding: 0 6.25rem;
-      // align-self: flex-end;
-    }
-    p {
-      font-size: 36px;
-      line-height: 50px;
-      letter-spacing: -0.005em;
-    }
+  @media (min-width: 768px) {
+    padding: 142px 100px;
+    height: min-content;
   }
 `;
 
-const StyledTitle = styled.h1`
-  font-style: normal;
-  font-weight: 500;
-  font-size: 3.125rem;
-  line-height: 51px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
+const Header = styled.header`
+  display: flex;
+  flex-direction: column;
+  place-content: flex-start;
+  align-items: flex-start;
+  gap: 40px;
 
-  @media screen and (min-width: 1200px) {
+  @media (min-width: 768px) {
+    flex-direction: row;
+    place-content: center space-between;
+  }
+`;
+
+const Title = styled.h2`
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2em;
+
+  @media (min-width: 768px) {
     font-weight: 500;
-    // font-size: 4.688rem;
-    font-size: 12.5rem;
-    line-height: 12.875rem;
-    letter-spacing: 0.105em;
-    transform: translateX(50.2466%);
+    font-size: 92px;
+    line-height: 134.52%;
+    /* identical to box height, or 124px */
+  }
+`;
+
+const Text = styled.p`
+  opacity: 0.7;
+  font-size: 22px;
+  line-height: 1.8em;
+  word-break: break-word;
+  overflow-wrap: break-word;
+
+  @media (min-width: 768px) {
+    flex-basis: 654px;
+
+    font-size: 32px;
+    line-height: 132.52%;
+    /* or 42px */
+    font-weight: 400;
+    letter-spacing: -0.045em;
+  }
+`;
+
+const Article = styled.article`
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+
+  @media (min-width: 768px) {
   }
 `;

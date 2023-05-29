@@ -5,32 +5,22 @@ import Head from "next/head";
 
 export default function Layout({ children }) {
   return (
-    <PageContainer>
+    <>
       <Head>
         <title>Dani Opri</title>
       </Head>
       <Navbar />
       <Main>{children}</Main>
       <Footer />
-    </PageContainer>
+    </>
   );
 }
 
-const PageContainer = styled.div``;
-
 const Main = styled.main`
-  // padding-bottom: 6rem;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // gap: 5rem;
+  display: flex;
+  flex-flow: column nowrap;
 
-  // @media screen and (max-width: 834px) {
-  //   margin: 1rem;
-  //   padding-bottom: 3rem;
-  // }
-
-  // @media screen and (min-width: 834px) {
-  //   margin: 100px;
-  // }
+  @media screen (max-width: 768px) {
+    gap: 200px;
+  }
 `;

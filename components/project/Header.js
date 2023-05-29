@@ -1,26 +1,26 @@
 import styled from "styled-components";
 
-export default function Header() {
+export default function Header({ title, stack, description }) {
   return (
     <Container>
       <Title>
-        <h1>Split Me</h1>
+        <h1>{title}</h1>
       </Title>
       <Body>
         <TechStack>
-          <li>Figma</li>
-          <li>*</li>
-          <li>React</li>
-          <li>*</li>
-          <li>MongoDB</li>
+          {stack.map((tag, index, arr) =>
+            index === arr.length - 1 ? (
+              <li key={index}>{tag}</li>
+            ) : (
+              <li key={index}>
+                {tag}
+                &nbsp; • &nbsp;
+              </li>
+            )
+          )}
         </TechStack>
         <Description>
-          <p>
-            Description of product, what was my task. What problem did i solve
-            Description of what was my t\k. What problem did i solve Description
-            of product, what was my task. What problem did i solve Description
-            of product, what was my tasklem did i solve
-          </p>
+          <p>{description}</p>
         </Description>
       </Body>
     </Container>

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import Image from "next/image";
+import LinkAnimation from "./LinkAnimation";
 
 export default function Navbar() {
   const [toggleMenue, setToggleMenue] = useState(false);
@@ -66,7 +67,7 @@ export default function Navbar() {
               offset={-70}
               duration={500}
             >
-              <a onClick={toggleNav}>Work</a>
+              <LinkAnimation onClick={toggleNav}>Work</LinkAnimation>
             </Link>
           </LeftItem>
           <MiddleItem>
@@ -78,7 +79,7 @@ export default function Navbar() {
               offset={-70}
               duration={500}
             >
-              <a onClick={toggleNav}>About</a>
+              <LinkAnimation onClick={toggleNav}>About</LinkAnimation>
             </Link>
           </MiddleItem>
 
@@ -91,7 +92,7 @@ export default function Navbar() {
               offset={-70}
               duration={500}
             >
-              <a onClick={toggleNav}>Contact</a>
+              <LinkAnimation onClick={toggleNav}>Contact</LinkAnimation>
             </Link>
           </RightItem>
         </ul>

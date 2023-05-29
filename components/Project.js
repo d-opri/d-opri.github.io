@@ -16,13 +16,15 @@ export default function Project({ title, stack, image, link }) {
     <ProjectContainer ref={ref} className={containerClassName}>
       {image.map((source, index) => {
         return (
-          <StyledImage
-            key={index}
-            height={454}
-            width={600}
-            alt={source.alt}
-            src={source.img}
-          />
+          <StyledLink href={link} key={index}>
+            <StyledImage
+              key={index}
+              height={454}
+              width={600}
+              alt={source.alt}
+              src={source.img}
+            />
+          </StyledLink>
         );
       })}
       <header>
@@ -82,13 +84,18 @@ const ProjectContainer = styled.article`
 const StyledImage = styled(Image)`
   border-radius: 25px;
   width: 100%;
-  height: 100%;
+  height: auto;
 
   :hover {
-    opacity: 50%;
+    opacity: 0.7;
   }
 `;
+
 const StyledLink = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+  border: none;
+
   h3 {
     font-size: 22px;
     line-height: 1.875em;
