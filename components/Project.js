@@ -83,14 +83,14 @@ const StyledImage = styled(Image)`
   border-radius: 25px;
   width: 100%;
   height: 100%;
-`;
-const StyledLink = styled(Link)`
-  color: #fff;
-  text-decoration: none;
 
   :hover {
     opacity: 0.7;
   }
+`;
+const StyledLink = styled(Link)`
+  color: #fff;
+  text-decoration: none;
 
   h3 {
     font-size: 22px;

@@ -31,8 +31,8 @@ const Section = styled.section`
   padding: 100px 1rem;
 
   @media (min-width: 768px) {
-    padding: 100px;
-    height: 100vh;
+    padding: 100px 200px;
+    height: min-content;
   }
 `;
 

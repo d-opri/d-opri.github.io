@@ -4,57 +4,54 @@ import LinkAnimation from "./newComponents/LinkAnimation";
 export default function LinkSection() {
   return (
     <Container>
-      <Email>
+      <Box>
         <LinkAnimation>dani.opri@protonmail.com</LinkAnimation>
-      </Email>
-
-      <Links>
-        <LinkAnimation href="#">LinkedIn</LinkAnimation>
-        <LinkAnimation href="#">Github</LinkAnimation>
-      </Links>
-      <Links>
-        <LinkAnimation href="#">Behance</LinkAnimation>
-        <LinkAnimation href="#">Xing</LinkAnimation>
-      </Links>
+      </Box>
+      <Wrapper>
+        <Box>
+          <LinkAnimation href="#">Behance</LinkAnimation>
+        </Box>
+        <BoxRight>
+          <LinkAnimation href="#">LinkedIn</LinkAnimation>
+        </BoxRight>
+        <Box>
+          <LinkAnimation href="#">Githubbb</LinkAnimation>
+        </Box>
+        <BoxRight>
+          <LinkAnimation href="#">Xing</LinkAnimation>
+        </BoxRight>
+      </Wrapper>
     </Container>
   );
 }
 
-const Container = styled.section`
-  align-items: center;
+const Container = styled.div`
   display: flex;
-  justify-content: space-between;
   flex-flow: row wrap;
-  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  outline: dashed white;
+  place-content: flex-start;
+  line-height: 1.4em;
+  font-size: 20px;
+  letter-spacing: -0.3px;
   padding: 50px 0;
 
   @media screen and (min-width: 768px) {
+    place-content: space-between;
+    font-size: 38px;
+    letter-spacing: -1px;
     padding: 100px;
   }
 `;
 
-const Email = styled.div`
-  line-height: 1.4em;
-  font-size: 20px;
-  letter-spacing: -0.3px;
-  outline: dashed white;
-
-  @media screen and (min-width: 768px) {
-    font-size: 38px;
-    letter-spacing: -1px;
-  }
-`;
-
-const Links = styled.div`
+const Wrapper = styled.div`
   display: flex;
-  gap: 10px 30px;
-  flex-basis: 420px;
-  align-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  outline: dashed white;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 40%;
+  margin-top: 1rem;
 
   a {
     font-size: 20px;
@@ -63,10 +60,19 @@ const Links = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    align-items: center;
-    flex-direction: column;
     a {
       font-size: 24px;
     }
+  }
+`;
+
+const Box = styled.div`
+  flex-basis: 50%;
+  margin-bottom: 1rem;
+`;
+
+const BoxRight = styled(Box)`
+  @media screen and (min-width: 768px) {
+    text-align: right;
   }
 `;

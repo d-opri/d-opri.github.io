@@ -1,10 +1,7 @@
 import styled from "styled-components";
 import SectionElement from "./Container";
-import { Item, List } from "./Skills";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import LinkAnimation from "./LinkAnimation";
-import LinksGroup from "./LinksGroup";
 import LinkSection from "../LinkSection";
 
 export default function Contact() {
@@ -33,20 +30,6 @@ export default function Contact() {
 
   return (
     <SectionElement id="Contact" title="Contact">
-      {/* <List>
-        <Item>
-          <LinkAnimation>dani.opri@protonmail.com</LinkAnimation>
-        </Item>
-        <Item>
-          <LinkAnimation>Github</LinkAnimation>
-        </Item>
-        <Item>
-          <LinkAnimation>Behance</LinkAnimation>
-        </Item>
-        <Item>
-          <LinkAnimation>LinkedIn</LinkAnimation>
-        </Item>
-      </List> */}
       <LinkSection />
       <StyledContactForm>
         <form ref={form} onSubmit={sendEmail}>
