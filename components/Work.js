@@ -1,5 +1,5 @@
 import SectionElement from "./Container";
-import { PROJECTS } from "./projectDB";
+import { PROJECTS } from "../json/data";
 import Project from "./Project";
 import styled from "styled-components";
 

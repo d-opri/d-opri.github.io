@@ -2,7 +2,7 @@ import styled from "styled-components";
 import SectionElement from "./Container";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import LinkSection from "./LinkSection";
+import LinkSection from "./Links";
 
 export default function Contact() {
   const form = useRef();
