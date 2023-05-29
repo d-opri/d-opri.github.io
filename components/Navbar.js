@@ -121,20 +121,12 @@ backdrop-filter: blur(15px);
     justify-content: space-between;
   }
 
-  a {
-    text-decoration: none;
-    transition: 0.7s ease;
-    cursor: pointer;
-  }
-
-  a:hover {
-    color: rgba(0, 255, 240, 1);
-    // text-decoration: line-through;
-  }
+  
 
   button {
     display: none;
-    align-self: flex-end;
+  position: relative;
+  left: 17rem;
     border: none;
     background: transparent;
     color: #fff;
@@ -147,7 +139,7 @@ backdrop-filter: blur(15px);
 
   @media screen and (max-width: 500px) {
     height: auto;
-
+justify-content: flex-end;
     ul {
       flex-flow: column;
       width: 100%;

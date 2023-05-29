@@ -1,23 +1,17 @@
-import Head from "next/head";
 import Hero from "../../components/Hero";
-import About from "../../components/About";
-import Skills from "../../components/Skills";
-import Contact from "../../components/Contact";
-import Work from "../../components/Work";
-import Projects from "../../components/Projects";
+import About from "../../components/newComponents/About";
+import Skills from "../../components/newComponents/Skills";
+import Contact from "../../components/newComponents/Contact";
+import Work from "../../components/newComponents/Work";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Dani Opri</title>
-      </Head>
       <Hero />
-      <Projects />
-      {/* <About />
-      <Skills />
       <Work />
-      <Contact /> */}
+      <About />
+      <Skills />
+      <Contact />
     </>
   );
 }
