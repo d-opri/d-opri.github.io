@@ -5,20 +5,28 @@ export default function LinkSection() {
   return (
     <Container>
       <Box>
-        <LinkAnimation>dani.opri@protonmail.com</LinkAnimation>
+        <LinkAnimation href="dani.opri@protonmail.com">
+          dani.opri@protonmail.com
+        </LinkAnimation>
       </Box>
       <Wrapper>
         <Box>
-          <LinkAnimation href="#">Behance</LinkAnimation>
+          <LinkAnimation href="https://www.behance.net/gallery/166288329/Pluto-Pay-Case-Study/modules/937770879">
+            Behance
+          </LinkAnimation>
         </Box>
         <BoxRight>
           <LinkAnimation href="#">LinkedIn</LinkAnimation>
         </BoxRight>
         <Box>
-          <LinkAnimation href="#">Githubbb</LinkAnimation>
+          <LinkAnimation href="https://github.com/d-opri">
+            Githubbb
+          </LinkAnimation>
         </Box>
         <BoxRight>
-          <LinkAnimation href="#">Xing</LinkAnimation>
+          <LinkAnimation href="https://www.xing.com/profile/Daniela_Opri/cv">
+            Xing
+          </LinkAnimation>
         </BoxRight>
       </Wrapper>
     </Container>
