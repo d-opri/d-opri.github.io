@@ -8,18 +8,18 @@ export default function Header() {
       </Title>
       <Body>
         <TechStack>
-          <li>Figma</li>
+          <li>Next JS</li>
           <li>*</li>
-          <li>React</li>
+          <li>Node JS</li>
           <li>*</li>
           <li>MongoDB</li>
+          <li>*</li>
+          <li>Figma</li>
         </TechStack>
         <Description>
           <p>
-            Description of product, what was my task. What problem did i solve
-            Description of what was my t\k. What problem did i solve Description
-            of product, what was my task. What problem did i solve Description
-            of product, what was my tasklem did i solve
+            A personal finance app to calculate and split bills and manage
+            expenses. Lead the Design Process and Development.
           </p>
         </Description>
       </Body>
