@@ -19,8 +19,8 @@ export default function LinkSection() {
           <LinkAnimation href="#">LinkedIn</LinkAnimation>
         </BoxRight>
         <Box>
-          <LinkAnimation href="https://github.com/d-opri">
-            Githubbb
+          <LinkAnimation href="https://github.com/d-opri/">
+            Github{" "}
           </LinkAnimation>
         </Box>
         <BoxRight>

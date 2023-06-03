@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export default function LinkAnimation({ children }) {
-  return <AnimatedLink>{children}</AnimatedLink>;
+export default function LinkAnimation({ children, href }) {
+  return <AnimatedLink href={href}>{children}</AnimatedLink>;
 }
 
 const AnimatedLink = styled.a`
