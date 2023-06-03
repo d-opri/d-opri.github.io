@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import TextImageContainer from "../../components/TextImageContainer";
+import TextImageContainer from "../../components/project/TextImageContainer";
 import Link from "next/link";
 
 export default function SplitMe() {

@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Split Me",
+    "stack": ["Frontend Development", "UX Design", "UI Design"],
+    "description": "A personal finance app to calculate and split bills and manage expenses.",
+    "image": [
+      {
+        "img": "/mockup.svg",
+        "alt": "split me app"
+      }
+    ],
+    "link": "/"
+  },
+  {
+    "title": "Pluto Pay",
+    "stack": ["UX Design", "UI Design"],
+    "description": "A banking app to calculate to manage personal finances.",
+    "image": [
+      {
+        "img": "/mockup.svg",
+        "alt": "pluto pay app"
+      }
+    ],
+    "link": "/"
+  }
+]
