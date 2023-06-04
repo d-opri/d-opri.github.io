@@ -5,22 +5,10 @@
     "description": "A personal finance app to calculate and split bills and manage expenses.",
     "image": [
       {
-        "img": "/mockup.svg",
-        "alt": "split me app"
+        "img": "/SplitMe.png",
+        "alt": "split me homepage"
       }
     ],
-    "link": "/"
-  },
-  {
-    "title": "Pluto Pay",
-    "stack": ["UX Design", "UI Design"],
-    "description": "A banking app to calculate to manage personal finances.",
-    "image": [
-      {
-        "img": "/mockup.svg",
-        "alt": "pluto pay app"
-      }
-    ],
-    "link": "/"
+    "link": "https://github.com/d-opri/Kroko-Capstone"
   }
 ]

@@ -2,6 +2,7 @@ import SectionElement from "./Container";
 import Project from "./Project";
 import styled from "styled-components";
 import { useFetch } from "../utils/useFetch";
+import ProjectSlide from "./ProjectSlide";
 
 export default function Work() {
   const { data, isLoading, isError } = useFetch("json/projects.json");
@@ -20,7 +21,7 @@ export default function Work() {
         {data.map((project, index) => {
           return (
             <li key={index}>
-              <Project {...project} />
+              <ProjectSlide {...project} />
             </li>
           );
         })}
@@ -32,8 +33,8 @@ export default function Work() {
 const ProjectList = styled.ul`
   list-style: none;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 150px;
 `;

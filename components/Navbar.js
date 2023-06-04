@@ -39,6 +39,7 @@ export default function Navbar() {
         <Image height={45} width={24} alt="Logo" src="Logo.svg" />
       </a> */}
       {/* <StyledLogo height={45} width={24} alt="Logo" src="Logo.svg" /> */}
+
       <button type="button" onClick={toggleNav}>
         {!toggleMenue ? (
           <HamburgerMenue
@@ -106,7 +107,7 @@ align-items: center;
 padding: 36px 60px;
 position: fixed;
 width: 100%;
-height: 115px;
+height: 100px;
 z-index: 1000;
 top: 0;
 
@@ -121,8 +122,6 @@ backdrop-filter: blur(15px);
     flex-direction: row;  
     justify-content: space-between;
   }
-
-  
 
   button {
     display: none;
