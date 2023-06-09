@@ -16,7 +16,7 @@ export default function Work() {
   }
 
   return (
-    <SectionElement id="Work" title="Work">
+    <SectionElement id="Work">
       <ProjectList>
         {data.map((project, index) => {
           return (

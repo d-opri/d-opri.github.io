@@ -47,18 +47,19 @@ export default function ProjectSlide({
           </LinkAnimation>
         </Body>
       </header>
-      {image.map((source, index) => {
-        return (
-          <ImageContainer key={index}>
+      <Container>
+        {image.map((source, index) => {
+          return (
             <StyledImage
-              height={676}
-              width={1367}
+              key={index}
+              height={846}
+              width={1704}
               alt={source.alt}
               src={source.img}
             />
-          </ImageContainer>
-        );
-      })}
+          );
+        })}
+      </Container>
     </ProjectContainer>
   );
 }
@@ -67,8 +68,9 @@ const ProjectContainer = styled.article`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: center;
-  height: min-content;
+  align-items: flex-start;
+  // height: min-content;
+  margin-top: 100px;
 
   header {
     display: flex;
@@ -127,21 +129,26 @@ const ProjectContainer = styled.article`
   }
 `;
 
-const ImageContainer = styled.figure`
-  max-width: 100%;
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+  gap: 3rem;
+  height: 100vh;
+  width: 30%;
 
   @media screen and (max-width: 834px) {
-    max-width: 100%;
+    width: 100%;
     margin-top: 1rem;
   }
 `;
 
 const StyledImage = styled(Image)`
   width: 100%;
+  border-radius: 30px;
+  height: auto;
   :hover {
     opacity: 0.7;
   }

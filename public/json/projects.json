@@ -5,8 +5,16 @@
     "description": "A personal finance app to calculate and split bills and manage expenses.",
     "image": [
       {
-        "img": "/SplitMe.png",
+        "img": "/SplitMe1.png",
         "alt": "split me homepage"
+      },
+      {
+        "img": "/SplitMe2.png",
+        "alt": "split me calculate"
+      },
+      {
+        "img": "/SplitMe3.png",
+        "alt": "split me bill"
       }
     ],
     "link": "https://github.com/d-opri/Kroko-Capstone"
