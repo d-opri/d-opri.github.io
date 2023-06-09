@@ -28,10 +28,10 @@ const Section = styled.section`
   display: flex;
   flex-flow: column;
   place-content: flex-start;
-  padding: 100px 1rem;
+  padding: 6.25rem 1rem;
 
   @media (min-width: 768px) {
-    padding: 142px 100px;
+    padding: 8.875rem 6.25rem;
     height: min-content;
   }
 `;
@@ -41,7 +41,7 @@ const Header = styled.header`
   flex-direction: column;
   place-content: flex-start;
   align-items: flex-start;
-  gap: 40px;
+  gap: 2.5rem;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -51,32 +51,29 @@ const Header = styled.header`
 
 const Title = styled.h2`
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 1.2em;
 
   @media (min-width: 768px) {
     font-weight: 500;
-    font-size: 92px;
+    font-size: 5.75rem;
     line-height: 134.52%;
     /* identical to box height, or 124px */
   }
 `;
 
 const Text = styled.p`
+  font-size: 1.3rem;
   opacity: 0.7;
-  font-size: 22px;
   line-height: 1.8em;
   word-break: break-word;
   overflow-wrap: break-word;
+  font-weight: 300;
 
   @media (min-width: 768px) {
     flex-basis: 654px;
-
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 132.52%;
-    /* or 42px */
-    font-weight: 400;
-    letter-spacing: -0.045em;
   }
 `;
 

@@ -2,23 +2,38 @@ import styled from "styled-components";
 import LinkAnimation from "./LinkAnimation";
 
 export default function LinkSection() {
+  const handleEmailClick = (event) => {
+    event.preventDefault();
+    window.location.href = `mailto:dani.opri@protonmail.com`;
+  };
   return (
     <Container>
       <Box>
-        <LinkAnimation>dani.opri@protonmail.com</LinkAnimation>
+        <LinkAnimation
+          href={`mailto:dani.opri@protonmail.com`}
+          onClick={handleEmailClick}
+        >
+          dani.opri@protonmail.com
+        </LinkAnimation>
       </Box>
       <Wrapper>
         <Box>
-          <LinkAnimation href="#">Behance</LinkAnimation>
+          <LinkAnimation href="https://www.behance.net/gallery/166288329/Pluto-Pay-Case-Study/modules/937770879">
+            Behance
+          </LinkAnimation>
         </Box>
         <BoxRight>
           <LinkAnimation href="#">LinkedIn</LinkAnimation>
         </BoxRight>
         <Box>
-          <LinkAnimation href="#">Githubbb</LinkAnimation>
+          <LinkAnimation href="https://github.com/d-opri/">
+            Github{" "}
+          </LinkAnimation>
         </Box>
         <BoxRight>
-          <LinkAnimation href="#">Xing</LinkAnimation>
+          <LinkAnimation href="https://www.xing.com/profile/Daniela_Opri/cv">
+            Xing
+          </LinkAnimation>
         </BoxRight>
       </Wrapper>
     </Container>
@@ -33,12 +48,12 @@ const Container = styled.div`
   width: 100%;
   place-content: flex-start;
   line-height: 1.4em;
-  font-size: 20px;
+  font-size: 1.25rem;
   letter-spacing: -0.3px;
 
   @media screen and (min-width: 768px) {
     place-content: space-between;
-    font-size: 38px;
+    font-size: 2.375rem;
     letter-spacing: -1px;
     padding: 100px;
   }
@@ -51,16 +66,17 @@ const Wrapper = styled.div`
   align-items: center;
   flex-basis: 40%;
   margin-top: 1rem;
+  font-weight: 300;
 
   a {
-    font-size: 20px;
+    font-size: 1.25rem;
     letter-spacing: -0.3px;
     line-height: 1.4em;
   }
 
   @media screen and (min-width: 768px) {
     a {
-      font-size: 24px;
+      font-size: 1.5rem;
     }
   }
 `;

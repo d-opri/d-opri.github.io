@@ -1,13 +1,23 @@
 import SectionElement from "./Container";
-import { PROJECTS } from "../json/data";
 import Project from "./Project";
 import styled from "styled-components";
+import { useFetch } from "../utils/useFetch";
 
 export default function Work() {
+  const { data, isLoading, isError } = useFetch("json/projects.json");
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error loading data.</div>;
+  }
+
   return (
-    <SectionElement id="Work" title="Work">
+    <SectionElement id="Work">
       <ProjectList>
-        {PROJECTS.map((project, index) => {
+        {data.map((project, index) => {
           return (
             <li key={index}>
               <Project {...project} />
@@ -22,8 +32,8 @@ export default function Work() {
 const ProjectList = styled.ul`
   list-style: none;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 3rem;
 `;

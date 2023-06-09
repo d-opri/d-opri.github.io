@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
-import Header from "./Header";
-import LinkSection from "./Links";
+import Header from "../Header";
+import LinkSection from "../Links";
 
 export default function TextImageContainer() {
   return (
@@ -15,12 +15,8 @@ export default function TextImageContainer() {
       />
       <Container>
         <TextContainer>
-          <h4>Details about Progress</h4>
-          <p>
-            Refraction Our taefabckjeskzrn vanc.js was Refraction Our task was
-            egfaiwluehcjeka/l Refraction Our task was Rd.wnekacn scezkdh ;lbhask
-            was Refraction Our task was{" "}
-          </p>
+          <h4>Design Process</h4>
+          <p>After a short research phase </p>
         </TextContainer>
         <StyledImage
           height={723}
@@ -50,12 +46,8 @@ export default function TextImageContainer() {
         />
       </ImageContainer>
       <TextContainer>
-        <h4>Giving adlfkj sdnvl afcm;ljgg ent ash vskbcjh grgsds</h4>
-        <p>
-          fraction Our taefabckjeskzrn vanc.js was Refraction Our task was
-          egfaiwluehcjeka/l Refraction Our task was Rd.wnekacn scezkdh ;lbhask
-          was Refraction Our task
-        </p>
+        <h4>App Development</h4>
+        <p>Bein</p>
       </TextContainer>
       <LinkSection />
     </Layout>

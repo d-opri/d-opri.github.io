@@ -19,7 +19,7 @@ export default function Hero() {
 const StyledHero = styled.header`
   display: flex;
   flex-flow: column nowrap;
-  gap: 55px;
+  gap: 3.375rem;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -47,12 +47,8 @@ const StyledHero = styled.header`
 
   p {
     font-weight: 500;
-    font-size: 18px;
-    line-height: 90.5%;
-    /* or 16px */
-
+    font-size: 1rem;
     text-align: right;
-    letter-spacing: 0.036em;
     text-transform: uppercase;
 
     animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal forwards running
@@ -69,27 +65,21 @@ const StyledHero = styled.header`
   }
 
   @media screen and (max-width: 390px) {
-    text-align: center;
-
     h1 {
       font-size: 5.5rem;
     }
-
     p {
       font-size: 1rem;
-      line-height: 5rem;
     }
   }
 `;
 
 const Title = styled.h1`
     font-weight: 500;
-    font-size: 108px;
-    line-height: 98px;
+    font-size: 6.75rem;
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-
 
     animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal forwards running
       header;

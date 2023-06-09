@@ -65,6 +65,7 @@ const ProjectContainer = styled.article`
   justify-content: space-between;
   align-items: flex-start;
   height: min-content;
+  margin-top: 100px;
 `;
 
 const TextContainer = styled.header`
@@ -73,16 +74,17 @@ const TextContainer = styled.header`
   justify-content: center;
   align-items: flex-start;
   max-width: 50%;
-  padding: 0 0 0 2.25rem;
+  padding: 0px 0px 0px 36px;
+
   position: -webkit-sticky;
   position: sticky;
   top: 40%;
 
   p {
+    padding-top: 2%;
+    font-size: 30px;
     letter-spacing: -0.031rem;
-    margin-bottom: 10%;
-    font-size: 2rem;
-    line-height: 132.52%;
+    line-height: 1.6em;
     font-weight: 300;
   }
 
@@ -93,9 +95,11 @@ const TextContainer = styled.header`
     padding: 0;
 
     p {
-      font-size: 1.3rem;
-      line-height: 1.8em;
+      font-size: 20px;
+      font-weight: 300;
       letter-spacing: -0.3px;
+      line-height: 1.6em;
+      paragraph-spacing: 0px;
     }
   }
 `;
@@ -108,8 +112,7 @@ const TechStack = styled.ul`
   width: 100%;
 
   li {
-    font-size: 1.7rem;
-    font-weight: 400;
+    font-size: 1.625rem;
     letter-spacing: -0.019rem;
     line-height: 1.4em;
     color: #b2b2b2;
@@ -117,9 +120,10 @@ const TechStack = styled.ul`
 
   @media screen and (max-width: 834px) {
     li {
-      font-size: 1.2rem;
+      font-size: 18px;
       letter-spacing: -0.3px;
       line-height: 1.4em;
+      paragraph-spacing: 0px;
     }
   }
 `;
@@ -129,7 +133,9 @@ const ImageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+
   gap: 3rem;
+
   width: 30%;
 
   @media screen and (max-width: 834px) {
@@ -157,13 +163,16 @@ const StyledLink = styled(Link)`
     font-size: 5.625rem;
     letter-spacing: 0.005em;
     line-height: 91px;
+    /* identical to box height */
   }
 
   @media screen and (max-width: 834px) {
     h3 {
       font-weight: 500;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       line-height: 34px;
+      /* identical to box height */
+
       letter-spacing: -0.035em;
     }
   }
@@ -174,4 +183,5 @@ const Body = styled.article`
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;
+  opacity: 0.8;
 `;

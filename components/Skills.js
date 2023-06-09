@@ -32,16 +32,13 @@ export const List = styled.ul`
 export const Item = styled.li`
   text-align: right;
   opacity: 0.7;
-  font-size: 22px;
+  font-size: 1.3rem;
   line-height: 1.8em;
-  word-break: break-word;
-  overflow-wrap: break-word;
+  font-weight: 300;
 
   @media (min-width: 768px) {
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 132.52%;
-    /* or 42px */
-    font-weight: 400;
     letter-spacing: -0.045em;
   }
 `;

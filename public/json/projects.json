@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Split Me",
+    "stack": ["Frontend Development", "UX Design", "UI Design"],
+    "description": "A personal finance app to calculate and split bills and manage expenses.",
+    "images": [
+      {
+        "src": "/SplitMe1.png",
+        "alt": "split me homepage"
+      },
+      {
+        "src": "/SplitMe2.png",
+        "alt": "split me calculate"
+      },
+      {
+        "src": "/SplitMe3.png",
+        "alt": "split me bill"
+      }
+    ],
+    "link": "https://github.com/d-opri/Kroko-Capstone"
+  }
+]

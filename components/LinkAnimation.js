@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export default function LinkAnimation({ children }) {
-  return <AnimatedLink>{children}</AnimatedLink>;
+export default function LinkAnimation({ children, href }) {
+  return <AnimatedLink href={href}>{children}</AnimatedLink>;
 }
 
 const AnimatedLink = styled.a`
@@ -14,8 +14,8 @@ const AnimatedLink = styled.a`
   ::after {
     content: "";
     position: absolute;
-    left: -6px; /* Adjust the value to extend the line */
-    right: -6px; /* Adjust the value to extend the line */
+    left: -6px;
+    right: -6px;
     height: 1px;
     background-color: #fff;
     transform: scaleX(0);

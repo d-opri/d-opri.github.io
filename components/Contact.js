@@ -78,7 +78,7 @@ const StyledContactForm = styled.form`
     }
   }
   label {
-    font-size: 18px;
+    font-size: 1rem;
     line-height: 1.8em;
   }
   input[type="submit"] {
@@ -86,7 +86,7 @@ const StyledContactForm = styled.form`
     cursor: pointer;
     background: white;
     border-radius: 20px;
-    width: 50%;
+
     align-self: flex-end;
     color: black;
     border: none;
@@ -95,7 +95,6 @@ const StyledContactForm = styled.form`
       opacity: 0.7;
     }
   }
-
   @media (min-width: 768px) {
     width: 50%;
   }
