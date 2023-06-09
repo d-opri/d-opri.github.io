@@ -35,11 +35,6 @@ export default function Navbar() {
 
   return (
     <StyledNav>
-      {/* <a onClick={goToTop}>
-        <Image height={45} width={24} alt="Logo" src="Logo.svg" />
-      </a> */}
-      {/* <StyledLogo height={45} width={24} alt="Logo" src="Logo.svg" /> */}
-
       <button type="button" onClick={toggleNav}>
         {!toggleMenue ? (
           <HamburgerMenue
@@ -104,16 +99,16 @@ export default function Navbar() {
 
 const StyledNav = styled.nav`
 align-items: center;
-padding: 36px 60px;
+padding: 2.25rem 3.75rem;
 position: fixed;
 width: 100%;
-height: 100px;
+height: 6.125rem;
 z-index: 1000;
 top: 0;
 
 background: rgba(0, 0, 0, 0.5);
 background-blend-mode: overlay;
-backdrop-filter: blur(15px);    
+backdrop-filter: blur(10px);    
 
    
   ul {
@@ -158,7 +153,7 @@ justify-content: flex-end;
 `;
 
 const LeftItem = styled.li`
-  width: 148px;
+  width: 9.25rem;
   flex-basis: auto;
   // font-weight: 500;
   // font-size: 32px;
@@ -169,7 +164,7 @@ const LeftItem = styled.li`
   text-transform: uppercase;
 
   text-align: left;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: -0.3px;
 `;

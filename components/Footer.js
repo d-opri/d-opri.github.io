@@ -6,9 +6,9 @@ const StyledFooter = styled.footer`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 71px;
+  height: 4.5rem;
   width: 100%;
-  padding: 0px 20px;
+  padding: 0 1.25rem;
   text-align: right;
 `;
 

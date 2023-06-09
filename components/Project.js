@@ -73,17 +73,16 @@ const TextContainer = styled.header`
   justify-content: center;
   align-items: flex-start;
   max-width: 50%;
-  padding: 0px 0px 0px 36px;
-
+  padding: 0 0 0 2.25rem;
   position: -webkit-sticky;
   position: sticky;
   top: 40%;
 
   p {
-    padding-top: 2%;
-    font-size: 30px;
     letter-spacing: -0.031rem;
-    line-height: 1.6em;
+    margin-bottom: 10%;
+    font-size: 2rem;
+    line-height: 132.52%;
     font-weight: 300;
   }
 
@@ -94,11 +93,9 @@ const TextContainer = styled.header`
     padding: 0;
 
     p {
-      font-size: 20px;
-      font-weight: 300;
+      font-size: 1.3rem;
+      line-height: 1.8em;
       letter-spacing: -0.3px;
-      line-height: 1.6em;
-      paragraph-spacing: 0px;
     }
   }
 `;
@@ -111,7 +108,8 @@ const TechStack = styled.ul`
   width: 100%;
 
   li {
-    font-size: 1.625rem;
+    font-size: 1.7rem;
+    font-weight: 400;
     letter-spacing: -0.019rem;
     line-height: 1.4em;
     color: #b2b2b2;
@@ -119,10 +117,9 @@ const TechStack = styled.ul`
 
   @media screen and (max-width: 834px) {
     li {
-      font-size: 18px;
+      font-size: 1.2rem;
       letter-spacing: -0.3px;
       line-height: 1.4em;
-      paragraph-spacing: 0px;
     }
   }
 `;
@@ -165,7 +162,7 @@ const StyledLink = styled(Link)`
   @media screen and (max-width: 834px) {
     h3 {
       font-weight: 500;
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       line-height: 34px;
       letter-spacing: -0.035em;
     }
@@ -177,5 +174,4 @@ const Body = styled.article`
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;
-  opacity: 0.8;
 `;

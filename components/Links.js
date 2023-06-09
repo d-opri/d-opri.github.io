@@ -41,12 +41,12 @@ const Container = styled.div`
   width: 100%;
   place-content: flex-start;
   line-height: 1.4em;
-  font-size: 20px;
+  font-size: 1.25rem;
   letter-spacing: -0.3px;
 
   @media screen and (min-width: 768px) {
     place-content: space-between;
-    font-size: 38px;
+    font-size: 2.375rem;
     letter-spacing: -1px;
     padding: 100px;
   }
@@ -59,16 +59,17 @@ const Wrapper = styled.div`
   align-items: center;
   flex-basis: 40%;
   margin-top: 1rem;
+  font-weight: 300;
 
   a {
-    font-size: 20px;
+    font-size: 1.25rem;
     letter-spacing: -0.3px;
     line-height: 1.4em;
   }
 
   @media screen and (min-width: 768px) {
     a {
-      font-size: 24px;
+      font-size: 1.5rem;
     }
   }
 `;
