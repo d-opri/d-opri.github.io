@@ -3,17 +3,17 @@
     "title": "Split Me",
     "stack": ["Frontend Development", "UX Design", "UI Design"],
     "description": "A personal finance app to calculate and split bills and manage expenses.",
-    "image": [
+    "images": [
       {
-        "img": "/SplitMe1.png",
+        "src": "/SplitMe1.png",
         "alt": "split me homepage"
       },
       {
-        "img": "/SplitMe2.png",
+        "src": "/SplitMe2.png",
         "alt": "split me calculate"
       },
       {
-        "img": "/SplitMe3.png",
+        "src": "/SplitMe3.png",
         "alt": "split me bill"
       }
     ],

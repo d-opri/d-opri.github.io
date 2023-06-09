@@ -8,26 +8,22 @@ export default function ProjectSlide({
   title,
   description,
   stack,
-  image,
+  images,
   link,
 }) {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0,
-    rootMargin: "0px 0px -50% 0px",
   });
 
-  const containerClassName = `hidden ${inView ? "show" : ""}`;
-
   return (
-    <ProjectContainer ref={ref} className={containerClassName}>
-      <header>
+    <ProjectContainer ref={ref}>
+      <TextContainer>
         <StyledLink href={link}>
           <h3>{title}</h3>
         </StyledLink>
-
         <Body>
-          <ul>
+          <TechStack>
             {stack.map((tag, index, arr) =>
               index === arr.length - 1 ? (
                 <li key={index}>{tag}</li>
@@ -38,28 +34,27 @@ export default function ProjectSlide({
                 </li>
               )
             )}
-          </ul>
-
+          </TechStack>
           <p>{description}</p>
           <LinkAnimation href={link}>
             {" "}
             <p>Visit Github Repo</p>{" "}
           </LinkAnimation>
         </Body>
-      </header>
-      <Container>
-        {image.map((source, index) => {
+      </TextContainer>
+      <ImageContainer>
+        {images.map((image, index) => {
           return (
             <StyledImage
               key={index}
               height={846}
               width={1704}
-              alt={source.alt}
-              src={source.img}
+              alt={image.alt}
+              src={image.src}
             />
           );
         })}
-      </Container>
+      </ImageContainer>
     </ProjectContainer>
   );
 }
@@ -69,32 +64,21 @@ const ProjectContainer = styled.article`
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: flex-start;
-  // height: min-content;
+  height: min-content;
   margin-top: 100px;
+`;
 
-  header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 50%;
-    padding: 0px 0px 0px 36px;
-  }
+const TextContainer = styled.header`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 50%;
+  padding: 0px 0px 0px 36px;
 
-  ul {
-    padding-top: 5%;
-    list-style: none;
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-  }
-
-  li {
-    font-size: 1.625rem;
-    letter-spacing: -0.019rem;
-    line-height: 1.4em;
-    color: #b2b2b2;
-  }
+  position: -webkit-sticky;
+  position: sticky;
+  top: 40%;
 
   p {
     padding-top: 2%;
@@ -105,14 +89,11 @@ const ProjectContainer = styled.article`
   }
 
   @media screen and (max-width: 834px) {
-    gap: 16px;
-    justify-content: center;
+    position: static;
+    gap: 0;
+    max-width: 100%;
+    padding: 0;
 
-    header {
-      gap: 0;
-      max-width: 100%;
-      padding: 0;
-    }
     p {
       font-size: 20px;
       font-weight: 300;
@@ -120,6 +101,24 @@ const ProjectContainer = styled.article`
       line-height: 1.6em;
       paragraph-spacing: 0px;
     }
+  }
+`;
+
+const TechStack = styled.ul`
+  padding-top: 5%;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+
+  li {
+    font-size: 1.625rem;
+    letter-spacing: -0.019rem;
+    line-height: 1.4em;
+    color: #b2b2b2;
+  }
+
+  @media screen and (max-width: 834px) {
     li {
       font-size: 18px;
       letter-spacing: -0.3px;
@@ -129,14 +128,14 @@ const ProjectContainer = styled.article`
   }
 `;
 
-const Container = styled.div`
+const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  overflow-y: auto;
+
   gap: 3rem;
-  height: 100vh;
+
   width: 30%;
 
   @media screen and (max-width: 834px) {
