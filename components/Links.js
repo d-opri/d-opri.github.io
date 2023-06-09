@@ -2,10 +2,17 @@ import styled from "styled-components";
 import LinkAnimation from "./LinkAnimation";
 
 export default function LinkSection() {
+  const handleEmailClick = (event) => {
+    event.preventDefault();
+    window.location.href = `mailto:dani.opri@protonmail.com`;
+  };
   return (
     <Container>
       <Box>
-        <LinkAnimation href="dani.opri@protonmail.com">
+        <LinkAnimation
+          href={`mailto:dani.opri@protonmail.com`}
+          onClick={handleEmailClick}
+        >
           dani.opri@protonmail.com
         </LinkAnimation>
       </Box>

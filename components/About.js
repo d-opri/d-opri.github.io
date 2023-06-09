@@ -5,7 +5,7 @@ export default function About() {
     <SectionElement
       id="About"
       title="About"
-      text="Moin moin, Dani here. I'm a creative developer based in Berlin. I found my happy place between code and design and now I am looking for new opportunities to create unique experiences."
+      text="Moin moin, Dani here. I'm a developer based in Berlin. I found my happy place somewhere between code and design, now I am looking for new opportunities to create unique experiences."
     />
   );
 }
