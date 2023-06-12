@@ -15,7 +15,7 @@ export default function LinkSection() {
         </Box>
         <BoxRight>
           <LinkAnimation href="https://www.linkedin.com/in/dani-opri-420321274/">
-            LinkedIn
+            Linked In
           </LinkAnimation>
         </BoxRight>
         <Box>
