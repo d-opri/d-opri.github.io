@@ -2,19 +2,10 @@ import styled from "styled-components";
 import LinkAnimation from "./LinkAnimation";
 
 export default function LinkSection() {
-  const handleEmailClick = (event) => {
-    event.preventDefault();
-    window.location.href = `mailto:dani.opri@protonmail.com`;
-  };
   return (
     <Container>
       <Box>
-        <LinkAnimation
-          href={`mailto:dani.opri@protonmail.com`}
-          onClick={handleEmailClick}
-        >
-          dani.opri@protonmail.com
-        </LinkAnimation>
+        <LinkAnimation>dani.opri@protonmail.com</LinkAnimation>
       </Box>
       <Wrapper>
         <Box>
@@ -23,12 +14,12 @@ export default function LinkSection() {
           </LinkAnimation>
         </Box>
         <BoxRight>
-          <LinkAnimation href="#">LinkedIn</LinkAnimation>
+          <LinkAnimation href="https://www.linkedin.com/in/dani-opri-420321274/">
+            LinkedIn
+          </LinkAnimation>
         </BoxRight>
         <Box>
-          <LinkAnimation href="https://github.com/d-opri/">
-            Github{" "}
-          </LinkAnimation>
+          <LinkAnimation href="https://github.com/d-opri">Github</LinkAnimation>
         </Box>
         <BoxRight>
           <LinkAnimation href="https://www.xing.com/profile/Daniela_Opri/cv">
@@ -48,12 +39,12 @@ const Container = styled.div`
   width: 100%;
   place-content: flex-start;
   line-height: 1.4em;
-  font-size: 1.25rem;
+  font-size: 20px;
   letter-spacing: -0.3px;
 
   @media screen and (min-width: 768px) {
     place-content: space-between;
-    font-size: 2.375rem;
+    font-size: 38px;
     letter-spacing: -1px;
     padding: 100px;
   }
@@ -66,17 +57,16 @@ const Wrapper = styled.div`
   align-items: center;
   flex-basis: 40%;
   margin-top: 1rem;
-  font-weight: 300;
 
   a {
-    font-size: 1.25rem;
+    font-size: 20px;
     letter-spacing: -0.3px;
     line-height: 1.4em;
   }
 
   @media screen and (min-width: 768px) {
     a {
-      font-size: 1.5rem;
+      font-size: 24px;
     }
   }
 `;
