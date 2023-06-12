@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import LinkAnimation from "./LinkAnimation";
+import { Fade } from "react-awesome-reveal";
 
 export default function ProjectSlide({
   title,
@@ -43,17 +44,19 @@ export default function ProjectSlide({
         </Body>
       </TextContainer>
       <ImageContainer>
-        {images.map((image, index) => {
-          return (
-            <StyledImage
-              key={index}
-              height={846}
-              width={1704}
-              alt={image.alt}
-              src={image.src}
-            />
-          );
-        })}
+        <Fade duration={1500}>
+          {images.map((image, index) => {
+            return (
+              <StyledImage
+                key={index}
+                height={846}
+                width={1704}
+                alt={image.alt}
+                src={image.src}
+              />
+            );
+          })}
+        </Fade>
       </ImageContainer>
     </ProjectContainer>
   );
@@ -72,18 +75,18 @@ const TextContainer = styled.header`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  max-width: 50%;
   padding: 0 0 0 2.25rem;
   position: -webkit-sticky;
   position: sticky;
   top: 40%;
+  max-width: 50%;
 
   p {
-    letter-spacing: -0.031rem;
-    margin-bottom: 10%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-weight: 300;
     font-size: 2rem;
     line-height: 132.52%;
-    font-weight: 300;
   }
 
   @media screen and (max-width: 834px) {
@@ -93,9 +96,8 @@ const TextContainer = styled.header`
     padding: 0;
 
     p {
-      font-size: 1.3rem;
       line-height: 1.8em;
-      letter-spacing: -0.3px;
+      font-size: 1.3rem;
     }
   }
 `;
@@ -108,16 +110,16 @@ const TechStack = styled.ul`
   width: 100%;
 
   li {
-    font-size: 1.7rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 132.52%;
+    font-weight: 500;
     letter-spacing: -0.019rem;
-    line-height: 1.4em;
-    color: #b2b2b2;
+    opacity: 0.7;
   }
 
   @media screen and (max-width: 834px) {
     li {
-      font-size: 1.2rem;
+      font-size: 1rem;
       letter-spacing: -0.3px;
       line-height: 1.4em;
     }
@@ -127,10 +129,10 @@ const TechStack = styled.ul`
 const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
   gap: 3rem;
-  width: 30%;
+  width: 25%;
+  height: min-content;
+  overflow: visible;
 
   @media screen and (max-width: 834px) {
     width: 100%;
@@ -140,8 +142,8 @@ const ImageContainer = styled.div`
 
 const StyledImage = styled(Image)`
   width: 100%;
-  border-radius: 30px;
   height: auto;
+
   :hover {
     opacity: 0.7;
   }

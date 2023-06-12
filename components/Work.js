@@ -2,6 +2,7 @@ import SectionElement from "./Container";
 import Project from "./Project";
 import styled from "styled-components";
 import { useFetch } from "../utils/useFetch";
+import ProjectSlide from "./ProjectV2";
 
 export default function Work() {
   const { data, isLoading, isError } = useFetch("json/projects.json");
@@ -20,6 +21,7 @@ export default function Work() {
         {data.map((project, index) => {
           return (
             <li key={index}>
+              {/* <ProjectSlide {...project} /> */}
               <Project {...project} />
             </li>
           );
