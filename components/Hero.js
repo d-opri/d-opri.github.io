@@ -50,6 +50,7 @@ const StyledHero = styled.header`
     font-size: 1rem;
     text-align: right;
     text-transform: uppercase;
+    line-height: 90.5%;
 
     animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal forwards running
       subtitle;
@@ -80,6 +81,7 @@ const Title = styled.h1`
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    line-height: 90.5%;
 
     animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal forwards running
       header;

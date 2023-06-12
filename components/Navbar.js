@@ -60,7 +60,6 @@ export default function Navbar() {
               to="Work"
               spy={true}
               smooth={true}
-              offset={-70}
               duration={500}
             >
               <LinkAnimation onClick={toggleNav}>Work</LinkAnimation>
@@ -72,7 +71,6 @@ export default function Navbar() {
               to="About"
               spy={true}
               smooth={true}
-              offset={-70}
               duration={500}
             >
               <LinkAnimation onClick={toggleNav}>About</LinkAnimation>
@@ -85,7 +83,6 @@ export default function Navbar() {
               to="Contact"
               spy={true}
               smooth={true}
-              offset={-70}
               duration={500}
             >
               <LinkAnimation onClick={toggleNav}>Contact</LinkAnimation>

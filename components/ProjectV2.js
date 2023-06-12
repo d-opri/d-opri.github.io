@@ -11,13 +11,8 @@ export default function ProjectSlide({
   images,
   link,
 }) {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0,
-  });
-
   return (
-    <ProjectContainer ref={ref}>
+    <ProjectContainer>
       <TextContainer>
         <StyledLink href={link}>
           <h3>{title}</h3>
@@ -45,13 +40,18 @@ export default function ProjectSlide({
       <ImageContainer>
         {images.map((image, index) => {
           return (
-            <StyledImage
-              key={index}
-              height={846}
-              width={1704}
-              alt={image.alt}
-              src={image.src}
-            />
+            <Box key={index}>
+              <Box2>
+                <Box3>
+                  <StyledImage
+                    height={846}
+                    width={1704}
+                    alt={image.alt}
+                    src={image.src}
+                  />
+                </Box3>
+              </Box2>
+            </Box>
           );
         })}
       </ImageContainer>
@@ -60,25 +60,35 @@ export default function ProjectSlide({
 }
 
 const ProjectContainer = styled.article`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  place-content: flex-start;
   align-items: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  flex-flow: row nowrap;
+  gap: 60px;
   height: min-content;
-  margin-top: 100px;
+  max-width: 1440px;
+  overflow: visible;
+  padding: 100px 100px 60px;
+  position: relative;
+  width: 100%;
 `;
 
 const TextContainer = styled.header`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  place-content: flex-start;
   align-items: flex-start;
-  max-width: 50%;
-  padding: 0px 0px 0px 36px;
+  display: flex;
+  flex: 1 0 0px;
+  flex-flow: column nowrap;
 
-  position: -webkit-sticky;
+  height: min-content;
+
+  overflow: visible;
+
   position: sticky;
-  top: 40%;
+
+  will-change: transform;
+  z-index: 1;
 
   p {
     padding-top: 2%;
@@ -129,14 +139,18 @@ const TechStack = styled.ul`
 `;
 
 const ImageContainer = styled.div`
+  place-content: flex-start;
+  align-items: flex-start;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-
-  gap: 3rem;
-
-  width: 30%;
+  flex: 1 0 0px;
+  flex-flow: column nowrap;
+  gap: 30px;
+  height: min-content;
+  max-width: 1440px;
+  overflow: visible;
+  padding: 0px 0px 100px;
+  position: relative;
+  width: 1px;
 
   @media screen and (max-width: 834px) {
     width: 100%;
@@ -144,10 +158,56 @@ const ImageContainer = styled.div`
   }
 `;
 
-const StyledImage = styled(Image)`
+const Box = styled.div`
+  place-content: center flex-start;
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  flex-flow: row nowrap;
+  gap: 30px;
+  height: min-content;
+  overflow: visible;
+  padding: 0px;
+  position: relative;
   width: 100%;
-  border-radius: 30px;
-  height: auto;
+`;
+
+const Box2 = styled.div`
+
+opacity: 1;
+transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg) translateZ(0px);
+}
+
+  aspect-ratio: 0.7125 / 1;
+  border-radius: 8px;
+  flex: 1 0 0px;
+  height: var(--framer-aspect-ratio-supported, 281px);
+  overflow: hidden;
+  position: relative;
+  width: 1px;
+  will-change: transform;
+
+
+`;
+
+const Box3 = styled.div`
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  border-radius: inherit;
+  inset: 0px;
+`;
+const StyledImage = styled(Image)`
+  pointer-events: none;
+  user-select: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-position: center center;
+  object-fit: cover;
+  image-rendering: auto;
+
   :hover {
     opacity: 0.7;
   }
