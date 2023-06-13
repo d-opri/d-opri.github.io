@@ -1,38 +1,32 @@
 import React from "react";
 import styled from "styled-components";
-import { useInView } from "react-intersection-observer";
+import { Fade } from "react-awesome-reveal";
 
 export default function SectionElement({ children, title, id, text }) {
-  const { ref, inView } = useInView({
-    triggerOnce: false,
-    threshold: 0,
-    rootMargin: "0px 0px -50% 0px",
-  });
-
-  const containerClassName = `hidden ${inView ? "show" : ""}`;
-
   return (
-    <Section ref={ref} id={id} className={containerClassName}>
-      <Header>
-        <Title>{title}</Title> <Text>{text}</Text>
-      </Header>
-      <Article>{children}</Article>
+    <Section id={id}>
+      <Fade cascade>
+        <Header>
+          <Title>{title}</Title> <Text>{text}</Text>
+        </Header>
+        <Article>{children}</Article>
+      </Fade>
     </Section>
   );
 }
 
 const Section = styled.section`
+  min-height: 100vh;
   height: min-content;
   width: 100%;
   scroll-snap-align: start;
   display: flex;
   flex-flow: column;
-  place-content: flex-start;
+  place-content: center;
   padding: 6.25rem 1rem;
 
   @media (min-width: 768px) {
     padding: 8.875rem 6.25rem;
-    height: min-content;
   }
 `;
 

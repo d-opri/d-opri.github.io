@@ -21,6 +21,6 @@ const Main = styled.main`
   flex-flow: column nowrap;
 
   @media screen and (max-width: 768px) {
-    gap: 200px;
+    gap: 150px;
   }
 `;

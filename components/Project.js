@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
-import { useInView } from "react-intersection-observer";
 import LinkAnimation from "./LinkAnimation";
 import { Fade } from "react-awesome-reveal";
 
@@ -12,13 +11,8 @@ export default function ProjectSlide({
   images,
   link,
 }) {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0,
-  });
-
   return (
-    <ProjectContainer ref={ref}>
+    <ProjectContainer>
       <TextContainer>
         <StyledLink href={link}>
           <h3>{title}</h3>
@@ -68,6 +62,7 @@ const ProjectContainer = styled.article`
   justify-content: space-between;
   align-items: flex-start;
   height: min-content;
+  // width: 100%;
 `;
 
 const TextContainer = styled.header`
