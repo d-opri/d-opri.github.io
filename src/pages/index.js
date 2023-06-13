@@ -3,15 +3,18 @@ import About from "../../components/About";
 import Skills from "../../components/Skills";
 import Contact from "../../components/Contact";
 import Work from "../../components/Work";
+import { Fade } from "react-awesome-reveal";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Work />
-      <About />
-      <Skills />
-      <Contact />
+      <Fade direction="left">
+        <About />
+        <Work />
+        <Skills />
+        <Contact />
+      </Fade>
     </>
   );
 }

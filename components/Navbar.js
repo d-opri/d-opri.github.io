@@ -26,13 +26,6 @@ export default function Navbar() {
     };
   }, []);
 
-  const goToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <StyledNav>
       <button type="button" onClick={toggleNav}>
@@ -40,15 +33,15 @@ export default function Navbar() {
           <HamburgerMenue
             height={24}
             width={24}
-            alt="Menue"
-            src="/HamburgerMenue.svg"
+            alt="Open Menue"
+            src="/menu_grid.svg"
           />
         ) : (
           <CloseMenue
             height={24}
             width={24}
-            alt="Menue"
-            src="/CloseMenue.svg"
+            alt="Close Menue"
+            src="/menu_close.svg"
           />
         )}
       </button>
