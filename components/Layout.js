@@ -19,8 +19,4 @@ export default function Layout({ children }) {
 const Main = styled.main`
   display: flex;
   flex-flow: column nowrap;
-
-  @media screen and (max-width: 768px) {
-    gap: 150px;
-  }
 `;
