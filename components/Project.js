@@ -31,10 +31,7 @@ export default function ProjectSlide({
             )}
           </TechStack>
           <p>{description}</p>
-          <LinkAnimation href={link}>
-            {" "}
-            <p>Visit Github Repo</p>{" "}
-          </LinkAnimation>
+          <LinkAnimation href={link}> Visit Github Repo </LinkAnimation>
         </Body>
       </TextContainer>
       <ImageContainer>
@@ -171,4 +168,16 @@ const Body = styled.article`
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;
+
+  a {
+    font-size: 20px;
+    letter-spacing: -0.3px;
+    line-height: 1.4em;
+  }
+
+  @media screen and (min-width: 768px) {
+    a {
+      font-size: 24px;
+    }
+  }
 `;
