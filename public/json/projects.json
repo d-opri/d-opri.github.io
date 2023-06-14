@@ -2,7 +2,7 @@
   {
     "title": "Split Me",
     "stack": ["Frontend Development", "UX Design", "UI Design"],
-    "description": "A personal finance app to calculate and split bills and manage expenses.",
+    "description": "A mobile app to calculate, split and manage shared bills.",
     "images": [
       {
         "src": "/SplitMe1.png",
@@ -17,6 +17,32 @@
         "alt": "split me bill"
       }
     ],
-    "link": "https://github.com/d-opri/Kroko-Capstone"
+    "link": "Visit Github Repository",
+    "url": "https://github.com/d-opri/Kroko-Capstone"
+  },
+  {
+    "title": "Pluto Pay",
+    "stack": ["UX Research", "UX Design", "UI Design"],
+    "description": "A banking app to manage personal finances, keep track of expenses and share bills.",
+    "images": [
+      {
+        "src": "/PP1.png",
+        "alt": "pluto pay homepage"
+      },
+      {
+        "src": "/PP2.png",
+        "alt": "pluto pay analytics"
+      },
+      {
+        "src": "/PP3.png",
+        "alt": "pluto pay calendar"
+      },
+      {
+        "src": "/PP4.png",
+        "alt": "pluto pay send money"
+      }
+    ],
+    "link": "See Case Study",
+    "url": "https://www.behance.net/gallery/166288329/Pluto-Pay-Case-Study/modules/937770879"
   }
 ]

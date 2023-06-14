@@ -35,5 +35,9 @@ const ProjectList = styled.ul`
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 10rem;
+
+  @media (min-width: 768px) {
+    gap: 50vh;
+  }
 `;

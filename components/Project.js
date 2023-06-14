@@ -10,6 +10,7 @@ export default function ProjectSlide({
   stack,
   images,
   link,
+  url,
 }) {
   return (
     <ProjectContainer>
@@ -31,7 +32,7 @@ export default function ProjectSlide({
             )}
           </TechStack>
           <p>{description}</p>
-          <LinkAnimation href={link}> Visit Github Repo </LinkAnimation>
+          <LinkAnimation href={url}> {link} </LinkAnimation>
         </Body>
       </TextContainer>
       <ImageContainer>
