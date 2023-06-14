@@ -29,7 +29,7 @@ export default function Contact() {
   // };
 
   return (
-    <SectionElement id="Contact" title="Contact">
+    <SectionElement id="Links" title="Links">
       {/* <StyledContactForm ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input type="text" name="user_name" />

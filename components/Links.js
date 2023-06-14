@@ -28,12 +28,12 @@ export default function LinkSection() {
         </BoxRight>
         <Box>
           <LinkAnimation href="Certificate_Frontend.pdf">
-            Certificate Frontend
+            Developer Certificate
           </LinkAnimation>
         </Box>
         <BoxRight>
           <LinkAnimation href="Certificate_UX.pdf">
-            Certificate UX
+            UX Design Certificate
           </LinkAnimation>
         </BoxRight>
       </Wrapper>

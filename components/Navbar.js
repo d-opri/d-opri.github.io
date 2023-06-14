@@ -34,14 +34,14 @@ export default function Navbar() {
             height={24}
             width={24}
             alt="Open Menue"
-            src="/menu_grid.svg"
+            src="/grid_icon.svg"
           />
         ) : (
           <CloseMenue
             height={24}
             width={24}
             alt="Close Menue"
-            src="/menu_close.svg"
+            src="/close_icon.svg"
           />
         )}
       </button>
@@ -73,12 +73,12 @@ export default function Navbar() {
           <RightItem>
             <Link
               activeClass="active"
-              to="Contact"
+              to="Links"
               spy={true}
               smooth={true}
               duration={500}
             >
-              <LinkAnimation onClick={toggleNav}>Contact</LinkAnimation>
+              <LinkAnimation onClick={toggleNav}>Links</LinkAnimation>
             </Link>
           </RightItem>
         </ul>
