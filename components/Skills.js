@@ -1,20 +1,25 @@
 import styled from "styled-components";
 import SectionElement from "./Container";
+import { Fade } from "react-awesome-reveal";
 
 export default function Skills() {
   return (
     <SectionElement id="Skills" title="Skills">
       <List>
-        <Item>React</Item>
-        <Item>Next JS</Item>
-        <Item>Node JS</Item>
-        <Item>MongoDB</Item>
+        <Fade cascade direction="up">
+          <Item>React</Item>
+          <Item>Next JS</Item>
+          <Item>Node JS</Item>
+          <Item>MongoDB</Item>
+        </Fade>
       </List>
       <List>
-        <Item>Figma</Item>
-        <Item>HTML & CSS</Item>
-        <Item>UX Design</Item>
-        <Item>UX Research</Item>
+        <Fade cascade direction="up">
+          <Item>Figma</Item>
+          <Item>HTML & CSS</Item>
+          <Item>UX Design</Item>
+          <Item>UX Research</Item>
+        </Fade>
       </List>
     </SectionElement>
   );
