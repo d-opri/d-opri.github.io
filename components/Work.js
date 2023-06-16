@@ -36,6 +36,7 @@ const ProjectList = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 10rem;
+  height: min-content;
 
   @media (min-width: 768px) {
     gap: 50vh;

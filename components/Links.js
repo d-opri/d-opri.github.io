@@ -26,7 +26,7 @@ export default function LinkSection() {
             Xing
           </LinkAnimation>
         </BoxRight>
-        <Box>
+        {/* <Box>
           <LinkAnimation href="Certificate_Frontend.pdf">
             Developer Certificate
           </LinkAnimation>
@@ -35,7 +35,7 @@ export default function LinkSection() {
           <LinkAnimation href="Certificate_UX.pdf">
             UX Design Certificate
           </LinkAnimation>
-        </BoxRight>
+        </BoxRight> */}
       </Wrapper>
     </Container>
   );

@@ -17,7 +17,7 @@ export default function SectionElement({ children, title, id, text }) {
 
 const Section = styled.section`
   min-height: 100vh;
-  height: min-content;
+  max-height: min-content;
   width: 100%;
   scroll-snap-align: start;
   display: flex;

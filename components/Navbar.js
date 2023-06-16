@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import Image from "next/image";
 import LinkAnimation from "./LinkAnimation";
 
@@ -48,7 +48,7 @@ export default function Navbar() {
       {(toggleMenue || width > 500) && (
         <ul>
           <LeftItem>
-            <Link
+            <ScrollLink
               activeClass="active"
               to="Work"
               spy={true}
@@ -56,10 +56,10 @@ export default function Navbar() {
               duration={500}
             >
               <LinkAnimation onClick={toggleNav}>Work</LinkAnimation>
-            </Link>
+            </ScrollLink>
           </LeftItem>
           <MiddleItem>
-            <Link
+            <ScrollLink
               activeClass="active"
               to="About"
               spy={true}
@@ -67,11 +67,11 @@ export default function Navbar() {
               duration={500}
             >
               <LinkAnimation onClick={toggleNav}>About</LinkAnimation>
-            </Link>
+            </ScrollLink>
           </MiddleItem>
 
           <RightItem>
-            <Link
+            <ScrollLink
               activeClass="active"
               to="Links"
               spy={true}
@@ -79,7 +79,7 @@ export default function Navbar() {
               duration={500}
             >
               <LinkAnimation onClick={toggleNav}>Links</LinkAnimation>
-            </Link>
+            </ScrollLink>
           </RightItem>
         </ul>
       )}
