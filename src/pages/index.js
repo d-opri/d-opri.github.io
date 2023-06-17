@@ -1,8 +1,8 @@
-import Hero from "../../components/Hero";
-import About from "../../components/About";
-import Skills from "../../components/Skills";
-import Contact from "../../components/Contact";
-import Work from "../../components/Work";
+import Hero from "../../components/sections/Hero";
+import About from "../../components/sections/About";
+import Skills from "../../components/sections/Skills";
+import Contact from "../../components/sections/Contact";
+import Work from "../../components/sections/Work";
 import { Fade } from "react-awesome-reveal";
 
 export default function Home() {

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
-import Header from "../Header";
+import Header from "./Header";
 import LinkSection from "../Links";
 
 export default function TextImageContainer() {

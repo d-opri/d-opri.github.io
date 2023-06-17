@@ -1,26 +1,26 @@
 import styled from "styled-components";
 
-export default function Header() {
+export default function Header({ title, stack, description }) {
   return (
     <Container>
       <Title>
-        <h1>Split Me</h1>
+        <h1>{title}</h1>
       </Title>
       <Body>
         <TechStack>
-          <li>Next JS</li>
-          <li>*</li>
-          <li>Node JS</li>
-          <li>*</li>
-          <li>MongoDB</li>
-          <li>*</li>
-          <li>Figma</li>
+          {stack.map((tag, index, arr) =>
+            index === arr.length - 1 ? (
+              <li key={index}>{tag}</li>
+            ) : (
+              <li key={index}>
+                {tag}
+                &nbsp; • &nbsp;
+              </li>
+            )
+          )}
         </TechStack>
         <Description>
-          <p>
-            A personal finance app to calculate and split bills and manage
-            expenses. Lead the Design Process and Development.
-          </p>
+          <p>{description}</p>
         </Description>
       </Body>
     </Container>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import SectionElement from "./Container";
 import { Fade } from "react-awesome-reveal";
-import LinkAnimation from "./LinkAnimation";
+import LinkAnimation from "../LinkAnimation";
 
 export default function Skills() {
   return (

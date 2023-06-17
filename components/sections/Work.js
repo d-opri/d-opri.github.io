@@ -1,7 +1,7 @@
 import SectionElement from "./Container";
-import Project from "./Project";
+import Project from "../Project";
 import styled from "styled-components";
-import { useFetch } from "../utils/useFetch";
+import { useFetch } from "../../utils/useFetch";
 
 export default function Work() {
   const { data, isLoading, isError } = useFetch("json/projects.json");
