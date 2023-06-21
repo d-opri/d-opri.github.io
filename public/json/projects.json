@@ -5,15 +5,15 @@
     "description": "A mobile app to calculate, split and manage shared bills.",
     "images": [
       {
-        "src": "/SplitMe/SplitMe1.png",
+        "src": "/SplitMe1.png",
         "alt": "split me homepage"
       },
       {
-        "src": "/SplitMe/SplitMe2.png",
+        "src": "/SplitMe2.png",
         "alt": "split me calculate"
       },
       {
-        "src": "/SplitMe/SplitMe3.png",
+        "src": "/SplitMe3.png",
         "alt": "split me bill"
       }
     ],
