@@ -5,15 +5,15 @@
     "description": "A mobile app to calculate, split and manage shared bills.",
     "images": [
       {
-        "src": "/SplitMe1.png",
+        "src": "/SplitMe/SplitMe1.png",
         "alt": "split me homepage"
       },
       {
-        "src": "/SplitMe2.png",
+        "src": "/SplitMe/SplitMe2.png",
         "alt": "split me calculate"
       },
       {
-        "src": "/SplitMe3.png",
+        "src": "/SplitMe/SplitMe3.png",
         "alt": "split me bill"
       }
     ],
@@ -26,19 +26,19 @@
     "description": "A banking app to manage personal finances, keep track of expenses and share bills.",
     "images": [
       {
-        "src": "/PP1.png",
+        "src": "/PlutoPay/PP1.png",
         "alt": "pluto pay homepage"
       },
       {
-        "src": "/PP2.png",
+        "src": "/PlutoPay/PP2.png",
         "alt": "pluto pay analytics"
       },
       {
-        "src": "/PP3.png",
+        "src": "/PlutoPay/PP3.png",
         "alt": "pluto pay calendar"
       },
       {
-        "src": "/PP4.png",
+        "src": "/PlutoPay/PP4.png",
         "alt": "pluto pay send money"
       }
     ],
