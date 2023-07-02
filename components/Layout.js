@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Navbar from "./Navbar";
 import Head from "next/head";
+import LinkAnimation from "./LinkAnimation";
 
 export default function Layout({ children }) {
   return (
@@ -11,7 +12,7 @@ export default function Layout({ children }) {
       <Navbar />
       <Main>{children}</Main>
       <Footer>
-        <p>d</p>
+        <LinkAnimation href="/impressum">Impressum</LinkAnimation>
         <p>Dani © 2023</p>
       </Footer>
     </>
